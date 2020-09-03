@@ -53,7 +53,7 @@ module.exports = function(app) {
   // GET route for getting all of the posts
   app.get("/api/posts/", (req, res) => {
     db.Post.findAll({})
-      .then(function(dbPost) {
+      .then(dbPost => {
         res.json(dbPost);
       });
   });
@@ -65,7 +65,7 @@ module.exports = function(app) {
         category: req.params.category
       }
     })
-      .then(function(dbPost) {
+      .then(dbPost => {
         res.json(dbPost);
       });
   });
@@ -77,7 +77,7 @@ module.exports = function(app) {
         id: req.params.id
       }
     })
-      .then(function(dbPost) {
+      .then(dbPost => {
         res.json(dbPost);
       });
   });
@@ -90,7 +90,7 @@ module.exports = function(app) {
       body: req.body.body,
       category: req.body.category
     })
-      .then(function(dbPost) {
+      .then(dbPost => {
         res.json(dbPost);
       });
   });
@@ -102,7 +102,7 @@ module.exports = function(app) {
         id: req.params.id
       }
     })
-      .then(function(dbPost) {
+      .then(dbPost => {
         res.json(dbPost);
       });
   });
@@ -115,7 +115,7 @@ module.exports = function(app) {
           id: req.body.id
         }
       })
-      .then(function(dbPost) {
+      .then(dbPost => {
         res.json(dbPost);
       });
   });
