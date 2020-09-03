@@ -1,2 +1,4 @@
 models/index.js
+models/post.js
+models/user.js
 node_modules
