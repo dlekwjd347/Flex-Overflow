@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "passport_demo",
+    "database": "fof_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -15,6 +15,14 @@
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  },
+  "lizComputer":{
+    "username": "root",
+    "password": "process.env.MYSQL_PW",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
   }
 }
