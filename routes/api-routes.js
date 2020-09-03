@@ -2,7 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -52,10 +52,9 @@ module.exports = function (app) {
   });
   // GET route for getting all of the posts
   app.get("/api/posts/", (req, res) => {
-    db.Post.findAll({})
-      .then(dbPost => {
-        res.json(dbPost);
-      });
+    db.Post.findAll({}).then(dbPost => {
+      res.json(dbPost);
+    });
   });
 
   // Get route for returning posts of a specific category
@@ -64,10 +63,9 @@ module.exports = function (app) {
       where: {
         category: req.params.category
       }
-    })
-      .then(dbPost => {
-        res.json(dbPost);
-      });
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
   });
 
   // Get route for retrieving a single post
@@ -76,10 +74,9 @@ module.exports = function (app) {
       where: {
         id: req.params.id
       }
-    })
-      .then(dbPost => {
-        res.json(dbPost);
-      });
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
   });
 
   // POST route for saving a new post
@@ -89,10 +86,9 @@ module.exports = function (app) {
       title: req.body.title,
       body: req.body.body,
       category: req.body.category
-    })
-      .then(dbPost => {
-        res.json(dbPost);
-      });
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
   });
 
   // DELETE route for deleting posts
@@ -101,22 +97,19 @@ module.exports = function (app) {
       where: {
         id: req.params.id
       }
-    })
-      .then(dbPost => {
-        res.json(dbPost);
-      });
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
   });
 
   // PUT route for updating posts
   app.put("/api/posts", (req, res) => {
-    db.Post.update(req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(dbPost => {
-        res.json(dbPost);
-      });
+    db.Post.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
   });
 };
