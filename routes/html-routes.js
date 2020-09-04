@@ -24,7 +24,8 @@ module.exports = function(app) {
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("/");  });
+    res.redirect("/");
+  });
 
 
   // Here we've add our isAuthenticated middleware to this route.
