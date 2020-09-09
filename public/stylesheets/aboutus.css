@@ -1,0 +1,32 @@
+body{
+    font-size: x-large;
+    background-color: #0b132b;
+    color: #6fffe9;
+    font-family: 'Gayathri', sans-serif;
+    margin-top: 30px;
+  }
+  #about{
+     text-align: center;
+  }
+  
+  h1{
+     text-align: center;
+     
+  }
+  
+  h2{
+     text-align: center;
+     font-size: larger;
+  }
+  
+  h3{
+  text-align: center;
+  font-size: larger;
+  }
+  
+  .card-title{
+     font-size: larger;
+  }
+  .card-description{
+     font-size: large;
+  }
