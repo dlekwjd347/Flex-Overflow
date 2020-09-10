@@ -59,12 +59,12 @@ module.exports = function(app) {
 
   app.get("/api/randomquestion/", (req, res) => {
     db.questionSet
-    .findOne({
+      .findOne({
         order: db.sequelize.random()
       })
       .then(dbquestion => {
         res.json(dbquestion);
-    });
+      });
   });
 
   // Get route for returning posts of a specific category
