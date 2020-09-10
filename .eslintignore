@@ -2,6 +2,7 @@ models/index.js
 models/post.js
 models/user.js
 
+models/questionSet.js
 node_modules
 models/userquestion.js
 
