@@ -1,19 +1,20 @@
 module.exports = function (sequelize, DataTypes) {
-    let Post = sequelize.define("userQuestion", {
-        category: {
+    const Post = sequelize.define("userQuestion", {
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        question: {
+        answer: {
             type: DataTypes.TEXT,
             allowNull: false,
             validate: {
                 len: [1]
             }
         }
+        
     });
     return Post;
 };
