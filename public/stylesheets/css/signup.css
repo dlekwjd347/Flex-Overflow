@@ -300,12 +300,12 @@
   
   .inputs:focus,
   .inputs.focus {
-    font-size: 34px;
-    height: 45px;
+    font-size: 16px;
+    height: 60px;
     color: white;
     text-align: center;
-    width: 190px;
-    margin-left: -36px;
+    width: 500px;
+    /* margin-left: -36px; */
     box-shadow: inset 200px 200px 200px 0 #6FFFE9;
     border: solid 10px #000000;
   }
