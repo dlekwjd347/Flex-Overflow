@@ -3,10 +3,18 @@ body, h1 {
     color: #6fffe9;
     background-color: #0B132B;
     text-align: center;
-
 }
+
+body {
+    margin-bottom: 100px;
+}
+
 p {
     color: #3A506B
+}
+
+.pback {
+    background-color: #1c2541;
 }
 
 .p-body {
@@ -45,6 +53,33 @@ p {
 .wireframe {
     margin: 50px;
 }
-img {
+
+.modalbox {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+.modalcover {
     height: 200px;
+}
+
+.modalimage-1 {
+    height: 400px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.modalimage-2 {
+    height: 380px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.modal-dialog {
+    width: 800px;
+}
+
+.modaltext {
+   text-align: center;
+}
+
+.portfolio-caption-heading {
+    margin-top: 15px;
 }

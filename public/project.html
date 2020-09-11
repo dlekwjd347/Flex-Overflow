@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link href="stylesheets/project.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="images\tab-icon.svg" />
-    <link rel="stylesheet" href="stylesheets/fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="stylesheets/css/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="stylesheets/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="stylesheets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/aos.css">
+    <link href="stylesheets/css/project.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stylesheets/css/jquery.fancybox.min.css">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <title>Flex Project Board</title>
 </head>
@@ -27,7 +25,7 @@
             our functional app.</p>
     </div>
     <div class="row p-body">
-        <div class="col-sm-12">
+        <div class="col-sm-12 pback">
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">User Story</h3>
@@ -37,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-12 pback">
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">Acceptance Criteria</h3>
@@ -55,7 +53,7 @@
         </div>
 
     </div>
-    <div class="wireframe">
+    <div class="wireframe container">
      <!--MODAL 1-->
      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 portfoliocardtop">
         <div class="portfolio-item post-entry-1 h-100 portfoliocard animate__animated animate__slideInUp">
@@ -63,7 +61,7 @@
                 <div class="portfolio-hover">
                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                 </div>
-                <img class="img-fluid portcover" src="/assets/images/wireframe1-1.JPG" alt="" />
+                <img class="img-fluid portcover modalcover modalbox" src="/assets/images/wireframe1-1.JPG" alt="" />
             </a>
             <div class="post-entry-1-contents">
               <div class="portfolio-caption">
@@ -80,7 +78,7 @@
                 <div class="portfolio-hover">
                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                 </div>
-                <img class="img-fluid portcover" src="/assets/images/wireframe2-2.JPG" alt="" />
+                <img class="img-fluid portcover modalcover modalbox" src="/assets/images/wireframe2-2.JPG" alt="" />
             </a>
             <div class="post-entry-1-contents">
               <div class="portfolio-caption">
@@ -96,7 +94,7 @@
                 <div class="portfolio-hover">
                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                 </div>
-                <img class="img-fluid portcover" src="/assets/images/wireframe3-3.JPG" alt="" />
+                <img class="img-fluid portcover modalcover modalbox" src="/assets/images/wireframe3-3.JPG" alt="" />
             </a>
             <div class="post-entry-1-contents">
               <div class="portfolio-caption">
@@ -110,24 +108,20 @@
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><img src="/assets/images/wireframe1.JPG" alt="Close modal" /></div>
+                <div class="close-modal" data-dismiss="modal"><img src="stylesheets/fonts/flaticon/font/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project Details Go Here-->
-                                <h2 class="text-uppercase">Simpli-Stocks</h2>
-                                <p class="item-intro text-muted">No more financial mumbo jumbo.</p>
-                                <img class="img-fluid d-block mx-auto" src="images\simpli-stocks.JPG" alt="" />
-                                <p>Providing an easy-to-use platform for researching a potential investment opportunity's financial data and news stories. The main differentiator between our product and existing outlets is they are not easy to understand or navigate. Our platform is user friendly for people who are not savvy with complex financial knowledge.</p>
-                                <a href="https://black03mach.github.io/ticker_query/" target="_blank"><button class="btn btn-primary" type="button" >
-                                  <i class="fas fa-times mr-1"></i>
-                                  See Project
-                              </button></a>
-                              <a href="https://github.com/black03mach/ticker_query" target="_blank"><button class="btn btn-warning" type="button" >
-                                <i class="fas fa-times mr-1"></i>
-                                See Github 
-                            </button></a>
+                                <h3 class="text-uppercase">Wire Frame 1</h3>
+                                <img class="img-fluid d-block mx-auto modalimage-1" src="/assets/images/wireframe1.JPG" alt="" />
+                                <p class="modaltext">1. Landing page</p>
+                                <p class="modaltext">2. Log in/Sign up page</p>
+                                <p class="modaltext">3. Main question post page</p>
+                                <p class="modaltext">4. Random question and answer quiz page</p>
+                                <p class="modaltext">5. About Us page</p>
+                                <p class="modaltext">6. Project Details: Acceptance Criteria, User Story, and Wire Frames</p>
                             </div>
                         </div>
                     </div>
@@ -139,25 +133,20 @@
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><img src="images\close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-dismiss="modal"><img src="stylesheets/fonts/flaticon/font/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project Details Go Here-->
-                                <h2 class="text-uppercase">Pokemon Quiz</h2>
-                                <p class="item-intro text-muted">Test your knowledge as a pokemon trainer</p>
-                                <img class="img-fluid d-block mx-auto" src="images\PokemonQuiz.JPG" alt="" />
-                                <p>This quick quiz will test your basic Pokemon knowledge. <br> Try to answer the questions within
-                                  the time limit. <br>Keep in mind that incorrect answers will penalize your score/time by five seconds!</p>
-                                <a href="https://dlekwjd347.github.io/Elizabeth-MCQuiz/index.html" target="_blank"><button class="btn btn-primary" type="button">
-                                    <i class="fas fa-times mr-1"></i>
-                                    See Project
-                                </button></a>
-                                <a href="https://github.com/dlekwjd347/Elizabeth-MCQuiz" target="_blank"><button class="btn btn-warning" type="button" >
-                                  <i class="fas fa-times mr-1"></i>
-                                  See Github 
-                              </button></a>
+                                <h3 class="text-uppercase">Wire Frame 2</h3>
+                                <img class="img-fluid d-block mx-auto modalimage-1" src="/assets/images/wireframe2.JPG" alt="" />
+                                <p class="modaltext">7. Contact form page</p>
+                                <p class="modaltext">8. Log out page</p>
+                                <p class="modaltext">9. Log in/Sign up page (Mobile)</p>
+                                <p class="modaltext">10. Main question post page (Mobile)</p>
+                                <p class="modaltext">11. Random question and answer quiz page (Mobile)</p>
+                                <p class="modaltext">12. About Us page (Mobile)</p>
                             </div>
                         </div>
                     </div>
@@ -169,25 +158,16 @@
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><img src="images\close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-dismiss="modal"><img src="stylesheets/fonts/flaticon/font/close-icon.svg" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project Details Go Here-->
-                                <h2 class="text-uppercase">Weather Dashboard</h2>
-                                <p class="item-intro text-muted">AS A traveler I want to see the weather outlook for multiple cities
-                                  so that I can plan a trip accordingly</p>
-                                <img class="img-fluid d-block mx-auto" src="images\WeatherDash.JPG" alt="" />
-                                <p>To retrieve data from another application's API to use it in the context of my own, I can access their data to use its functionality to retrieve data for cities. This Weather Dashboard will run in the browser using the Weather API from <a href="https://openweathermap.org/api">OpenWeather API.</a></p>
-                                <a href="https://dlekwjd347.github.io/Elizabeth-Weather-Dash/index.html" target="_blank"><button class="btn btn-primary" type="button">
-                                  <i class="fas fa-times mr-1"></i>
-                                  See Project
-                              </button></a>
-                              <a href="https://github.com/dlekwjd347/Elizabeth-Weather-Dash" target="_blank"><button class="btn btn-warning" type="button" >
-                                <i class="fas fa-times mr-1"></i>
-                                See Github 
-                            </button></a>
+                                <h3 class="text-uppercase">Wire Frame 3</h3>
+                                <img class="img-fluid d-block mx-auto modalimage-2" src="/assets/images/wireframe3.JPG" alt="" />
+                                <p class="modaltext">13. Project Details: Acceptance Criteria, User Story, and Wire Frames (Mobile)</p>
+                                <p class="modaltext">14. Contact form page (Mobile)</p>
                             </div>
                         </div>
                     </div>
@@ -196,6 +176,9 @@
         </div>
     </div>
 </div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
 
 
 </body>
