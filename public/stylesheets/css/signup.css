@@ -33,7 +33,7 @@
   #line {
     width: 400px;
     height: 10px;
-    background-color: #84c754;
+    background-color: #6FFFE9;
     z-index: 1000;
   }
   
@@ -45,7 +45,7 @@
     height: 50px;
     border-spacing: 5px;
     font-size: 40px;
-    color: #84c754;
+    color: #6FFFE9;
     z-index: 1000;
   }
   
@@ -271,7 +271,7 @@
   body {
     position: absolute;
     overflow:hidden;
-    font-family: "Bungee Hairline";
+    font-family: 'Lexend Deca', sans-serif;
     line-height: 26px;
     background-color: #000000;
     margin-top: 35vh;
@@ -286,14 +286,14 @@
     position: static;
     color: #000000;
     height: 30px;
-    font-family: "Bungee Hairline";
+    font-family: 'Lexend Deca', sans-serif;
     outline: none;
     font-size: 20px;
     text-align: center;
     width: 120px;
     z-index: 100;
     background-color: #000000;
-    border: solid 1px #84c754;
+    border: solid 1px #6FFFE9;
     ;
     transition: box-shadow 1.5s, border 1s, margin-left 1s, width 1s, text-align 1s, height 1s, font-size 1.5s, color 1s;
   }
@@ -306,7 +306,7 @@
     text-align: center;
     width: 190px;
     margin-left: -36px;
-    box-shadow: inset 200px 200px 200px 0 #84c754;
+    box-shadow: inset 200px 200px 200px 0 #6FFFE9;
     border: solid 10px #000000;
   }
   
@@ -317,12 +317,12 @@
     position: static;
     outline: none;
     height: 60px;
-    font-family: "Bungee Hairline";
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 30px;
     float: centre;
     text-align: centre;
     posistion: absolute;
-    color: #84c754;
+    color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
     margin-left: -13px;
@@ -336,13 +336,13 @@
     outline: none;
     margin-top: -10px;
     height: 50px;
-    font-family: "Bungee Hairline";
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 30px;
     float: centre;
     /*float centre keeps the input feilds above the buttons, found through http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning*/
     text-align: centre;
     posistion: absolute;
-    color: #84c754;
+    color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
     margin-left: -15px;
@@ -352,23 +352,23 @@
   /*style placeholder text in input forms, https://davidwalsh.name/html5-placeholder-css*/
   
   ::-webkit-input-placeholder {
-    color: #84c754;
-    font-family: "Bungee Hairline";
+    color: #6FFFE9;
+    font-family: 'Lexend Deca', sans-serif;
   }
   
   ::-moz-placeholder {
-    color: #84c754;
-    font-family: "Bungee Hairline";
+    color: #6FFFE9;
+    font-family: 'Lexend Deca', sans-serif;
   }
   
   :-ms-input-placeholder {
-    color: #84c754;
-    font-family: "Bungee Hairline";
+    color: #6FFFE9;
+    font-family: 'Lexend Deca', sans-serif;
   }
   
   input:-moz-placeholder {
-    color: #84c754;
-    font-family: "Bungee Hairline";
+    color: #6FFFE9;
+    font-family: 'Lexend Deca', sans-serif;
   }
   
   
@@ -383,10 +383,10 @@
     /*forces mouse clicks to go through table, "http://stackoverflow.com/questions/3538489/html-css-make-a-div-invisible-to-clicks"*/
     z-index: -1000;
     margin-top: -30vh;
-    color: #84c754;
+    color: #6FFFE9;
     margin-left: -44vw;
     border-collapse: collapse;
-    border: 1px solid #84c754;
+    border: 1px solid #6FFFE9;
     opacity: 0;
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
@@ -483,10 +483,10 @@
     /*forces mouse clicks to go through table, "http://stackoverflow.com/questions/3538489/html-css-make-a-div-invisible-to-clicks"*/
     z-index: -1000;
     margin-top: -30vh;
-    color: #84c754;
+    color: #6FFFE9;
     margin-left: -44vw;
     border-collapse: collapse;
-    border: 1px solid #84c754;
+    border: 1px solid #6FFFE9;
     opacity: 1;
   }
   
@@ -502,7 +502,7 @@
     /* Chrome, Safari, Opera */
     animation-play-state: paused;
     font-size: 20px;
-    color: #84c754;
+    color: #6FFFE9;
     margin-top: 0vh;
     margin-left: -130px;
     animation-timing-function: ease-in-out;
@@ -580,7 +580,7 @@
   .welcomeS {
     position: static;
     font-size: 20px;
-    color: #84c754;
+    color: #6FFFE9;
     margin-top: 0vh;
     margin-left: -125px;
   }
@@ -593,12 +593,12 @@
     outline: none;
     margin-top: 10px;
     height: 50px;
-    font-family: "Bungee Hairline";
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 30px;
     float: centre;
     text-align: centre;
     posistion: absolute;
-    color: #84c754;
+    color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
     margin-left: -30px;
@@ -612,12 +612,12 @@
     outline: none;
     margin-top: 0px;
     height: 50px;
-    font-family: "Bungee Hairline";
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 30px;
     float: centre;
     text-align: centre;
     posistion: absolute;
-    color: #84c754;
+    color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
     margin-left: 8px;
@@ -629,12 +629,12 @@
     outline: none;
     /*margin-top: -100000px;*/
     height: 50px;
-    font-family: "Bungee Hairline";
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 30px;
     float: centre;
     text-align: centre;
     posistion: fixed;
-    color: #84c754;
+    color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
     margin-left: 60px;
