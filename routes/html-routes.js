@@ -1,49 +1,99 @@
-// Requiring path to so we can use relative routes to our HTML files
-const path = require("path");
+// *********************************************************************************
+// html-routes.js - this file offers a set of routes for sending users to the various html pages
+// *********************************************************************************
 
-// Requiring our custom middleware for checking if a user is logged in
-const isAuthenticated = require("../config/middleware/isAuthenticated");
+// Dependencies
+// =============================================================
+var path = require("path");
+var db = require("../models");
 
+//var router = require("express").Router();
+
+// Adding a little piece of middleware to check if a user is logged in
+var authCheck = function(req, res, next) {
+	if (!req.user) {
+		res.redirect('/index');
+	}
+	else {
+		next();
+	}
+}
+
+
+// Routes
+// =============================================================
 module.exports = function(app) {
-  app.get("/", (req, res) => {
-    // If the user already has an account send them to the blog-post page
-    if (req.user) {
-      res.redirect("/blog-post");
-    }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
-  });
+	app.get("/", function(req, res) {
+	    res.render("landing");
+	});
 
-  app.get("/login", (req, res) => {
-    // If the user already has an account send them to the blog-post page
-    if (req.user) {
-      res.redirect("/blog-post");
-    }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
-  });
+	app.get("/index", authCheck, function(req, res) {
+		console.log("Before the get attempt");
+		var query = {};
+		db.Post.findAll({
+			where: query,
+			include: [
+                db.User, 
+                {
+                    model: db.Comment,
+					include: [ db.User],
+                }
+			],
+			order: [
+				['createdAt', 'DESC'],
+				[db.Comment, 'createdAt', 'ASC']	
+            ]
+			}).then(posts => {
+			var hbsObject = {
+				hbPosts: posts,
+				user: req.user
+			}
+			res.render("index", hbsObject);		
+		});
+	});
 
-  // Route for logging user out
-  app.get("/logout", (req, res) => {
-    req.logout();
-    res.redirect("/");
-  });
+	app.get("/index/:id", authCheck, function(req, res) {
+		console.log("Before the get attempt");
+		// console.log(req.user);
+		var query = {};
+        // if (req.query.user_id) {
+        //   query.UserId = req.query.user_id;
+        // }
+		db.Post.findAll({
+			where: {
+				id: req.params.id
+			},
+			order: [
+				['createdAt', 'DESC'],
+				[db.Comment, 'createdAt', 'ASC']	
+            ],
+			include: [
+                db.User, 
+                {
+					model: db.Comment,
+					include: [ db.User]
+                }
+			]
+			}).then(posts => {
+			var hbsObject = {
+				hbPosts: posts,
+				user: req.user
+			}
 
-  // Here we've add our isAuthenticated middleware to this route.
-  // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/blog-post", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/blog-post.html"));
-  });
+			res.render("index", hbsObject);		
+		});
+	});
 
-  app.get("/q&a", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/q&a.html"));
-  });
-
-  // blog route loads blog.html
-  app.get("/blog-post", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/blog-post.html"));
-  });
-
-  // blog route loads blog.html
-  app.get("/aboutus", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/aboutus.html"));
-  });
+	
 };
+
+
+
+
+
+
+
+
+
+
+
