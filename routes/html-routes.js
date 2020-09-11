@@ -9,15 +9,6 @@ var db = require("../models");
 
 //var router = require("express").Router();
 
-// Adding a little piece of middleware to check if a user is logged in
-var authCheck = function(req, res, next) {
-	if (!req.user) {
-		res.redirect('/landing');
-	}
-	else {
-		next();
-	}
-}
 
 
 // Routes
@@ -27,30 +18,30 @@ module.exports = function(app) {
 	    res.render("landing");
 	});
 
-	app.get("/main", function(req, res) {
-		console.log("Before the get attempt");
-		var query = {};
-		db.Post.findAll({
-			where: query,
-			include: [
-                db.User, 
-                {
-                    model: db.Comment,
-					include: [ db.User],
-                }
-			],
-			order: [
-				['createdAt', 'DESC'],
-				[db.Comment, 'createdAt', 'ASC']	
-            ]
-			}).then(posts => {
-			var hbsObject = {
-				hbPosts: posts,
-				user: req.user
-			}
-			res.render("main", hbsObject);		
-		});
-	});
+	// app.get("/main", function(req, res) {
+	// 	console.log("Before the get attempt");
+	// 	var query = {};
+	// 	db.Post.findAll({
+	// 		where: query,
+	// 		include: [
+    //             db.User, 
+    //             {
+    //                 model: db.Comment,
+	// 				include: [ db.User],
+    //             }
+	// 		],
+	// 		order: [
+	// 			['createdAt', 'DESC'],
+	// 			[db.Comment, 'createdAt', 'ASC']	
+    //         ]
+	// 		}).then(posts => {
+	// 		var hbsObject = {
+	// 			hbPosts: posts,
+	// 			user: req.user
+	// 		}
+	// 		res.render("main", hbsObject);		
+	// 	});
+	// });
 
 	app.get("/landing/:id", function(req, res) {
 		console.log("Before the get attempt");
