@@ -12,7 +12,7 @@ var db = require("../models");
 // Adding a little piece of middleware to check if a user is logged in
 var authCheck = function(req, res, next) {
 	if (!req.user) {
-		res.redirect('/index');
+		res.redirect('/landing');
 	}
 	else {
 		next();
@@ -27,7 +27,7 @@ module.exports = function(app) {
 	    res.render("landing");
 	});
 
-	app.get("/index", authCheck, function(req, res) {
+	app.get("/main", function(req, res) {
 		console.log("Before the get attempt");
 		var query = {};
 		db.Post.findAll({
@@ -48,11 +48,11 @@ module.exports = function(app) {
 				hbPosts: posts,
 				user: req.user
 			}
-			res.render("index", hbsObject);		
+			res.render("main", hbsObject);		
 		});
 	});
 
-	app.get("/index/:id", authCheck, function(req, res) {
+	app.get("/landing/:id", function(req, res) {
 		console.log("Before the get attempt");
 		// console.log(req.user);
 		var query = {};
@@ -80,7 +80,7 @@ module.exports = function(app) {
 				user: req.user
 			}
 
-			res.render("index", hbsObject);		
+			res.render("landing", hbsObject);		
 		});
 	});
 
