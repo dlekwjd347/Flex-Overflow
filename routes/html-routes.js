@@ -1,90 +1,38 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
+// Requiring path to so we can use relative routes to our HTML files
+const path = require("path");
 
-// Dependencies
-// =============================================================
-var path = require("path");
-var db = require("../models");
+// Requiring our custom middleware for checking if a user is logged in
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-//var router = require("express").Router();
+module.exports = function (app) {
+  app.get("/", (req, res) => {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/mainblog");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
 
+  app.get("/login", (req, res) => {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/mainblog");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
 
+  // Here we've add our isAuthenticated middleware to this route.
+  // If a user who is not logged in tries to access this route they will be redirected to the signup page
+  // app.get("/members", isAuthenticated, (req, res) => {
+  //   res.sendFile(path.join(__dirname, "../public/members.html"));
+  // });
 
-// Routes
-// =============================================================
-module.exports = function(app) {
-	app.get("/", function(req, res) {
-	    res.render("landing");
-	});
-
-	// app.get("/main", function(req, res) {
-	// 	console.log("Before the get attempt");
-	// 	var query = {};
-	// 	db.Post.findAll({
-	// 		where: query,
-	// 		include: [
-    //             db.User, 
-    //             {
-    //                 model: db.Comment,
-	// 				include: [ db.User],
-    //             }
-	// 		],
-	// 		order: [
-	// 			['createdAt', 'DESC'],
-	// 			[db.Comment, 'createdAt', 'ASC']	
-    //         ]
-	// 		}).then(posts => {
-	// 		var hbsObject = {
-	// 			hbPosts: posts,
-	// 			user: req.user
-	// 		}
-	// 		res.render("main", hbsObject);		
-	// 	});
-	// });
-
-	app.get("/landing/:id", function(req, res) {
-		console.log("Before the get attempt");
-		// console.log(req.user);
-		var query = {};
-        // if (req.query.user_id) {
-        //   query.UserId = req.query.user_id;
-        // }
-		db.Post.findAll({
-			where: {
-				id: req.params.id
-			},
-			order: [
-				['createdAt', 'DESC'],
-				[db.Comment, 'createdAt', 'ASC']	
-            ],
-			include: [
-                db.User, 
-                {
-					model: db.Comment,
-					include: [ db.User]
-                }
-			]
-			}).then(posts => {
-			var hbsObject = {
-				hbPosts: posts,
-				user: req.user
-			}
-
-			res.render("landing", hbsObject);		
-		});
-	});
-
-	
+  // This is to pass back the affirmation. db.whatever.
+  app.get("/members", isAuthenticated, (req, res) => {
+    const handlebarsObject = {
+      userName: "Charlie",
+    };
+    console.log("in route get / ");
+    res.render("members", handlebarsObject);
+  });
 };
-
-
-
-
-
-
-
-
-
-
-
