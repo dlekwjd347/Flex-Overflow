@@ -1,49 +1,84 @@
-#content{
-    text-align: center;
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #1C2541;
+}
+.content {
+    margin-left: 50px;
+    margin-right: 130px;
+    margin-bottom: 40px;
 }
 
-textarea{
-    background-color: #6FFFE9;
-    color: black;
-    font-size: larger;
 
+.label {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-decoration: underline;
+    color: #5BC3EB;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px #BFD7FF;
 }
 
-body{
-    background-color: #0b132b;
-    color: white;
+.prompt{
+    font-family: 'Monda', sans-serif;
+    text-shadow: 2px 2px darkblue;
+    font-style: italic;
+    color: #6FFFE9;
+    font-size: 27px;
+}
+#answer, #example {
+    color: #E9FAE3;
+    font-size: 18px;
+    text-align: left;
+    
+}
+#question {
+    color: #E9FAE3;
+    font-size: 21px;
+    font-weight: bold;
+     
 }
 
 h1{
     font-size: larger;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
+  color: #5BC0BE
 }
 
-button{
-    background-color: #3a506b;
+#new-question {
+    background-color: #CEEDDB;
     border: white;
-    color: white;
-    padding: 15px 40px;
+    color: #304C89;
+    padding: 10px 15px;
     text-align: center;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
     transition: 1.5s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+
 }
-button:hover{
-    box-shadow: 0 20px 50px 0 aqua inset, 0 20px 50px 0 aqua;
+#new-question:hover{
+    box-shadow: 0 8px 20px 0 #B4CEB3 inset, 0 8px 20px 0 #B4CEB3;
 }
 
-/* header {
-    width: 100%;
-    height: 20vh;
-    background: url(https://cxl.com/wp-content/uploads/2018/09/coding-language.jpg) ;
-    background-size: initial;
-    background-position: top;
-} */
+#answer-button {
+    background-color: #F6F5AE;
+    border: white;
+    color: #304C89;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1.5s;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+#answer-button:hover{
+    box-shadow: 0 8px 20px 0 #FAF3DD inset, 0 8px 20px 0 #FAF3DD;
+}
+
 
 .logo {
     line-height: 60px;
