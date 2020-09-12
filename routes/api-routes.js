@@ -59,12 +59,12 @@ module.exports = function(app) {
 
   app.get("/api/randomquestion/", (req, res) => {
     db.questionSet
-    .findOne({
+      .findOne({
         order: db.sequelize.random()
       })
       .then(dbquestion => {
         res.json(dbquestion);
-    });
+      });
   });
 
   // Get route for returning posts of a specific category
@@ -78,16 +78,16 @@ module.exports = function(app) {
     });
   });
 
-  // Get route for retrieving a single post
-  app.get("/api/posts/:id", (req, res) => {
-    db.UserQuestion.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(dbPost => {
-      res.json(dbPost);
-    });
-  });
+  // // Get route for retrieving a single post
+  // app.get("/api/posts/:id", (req, res) => {
+  //   db.UserQuestion.findOne({
+  //     where: {
+  //       question: req.params.question
+  //     }
+  //   }).then(dbPost => {
+  //     res.json(dbPost);
+  //   });
+  // });
 
   // POST route for saving a new post
   app.post("/api/question", (req, res) => {
@@ -102,7 +102,7 @@ module.exports = function(app) {
   app.post("/api/answer", (req, res) => {
     console.log(req.body);
     db.UserAnswer.create({
-     answer: req.body.answer
+      answer: req.body.answer
     }).then(dbPost => {
       res.json(dbPost);
     });
@@ -118,14 +118,14 @@ module.exports = function(app) {
     });
   });
 
-  // PUT route for updating posts
-  app.put("/api/posts", (req, res) => {
-    db.UserQuestion.update(req.body, {
-      where: {
-        id: req.body.id
-      }
-    }).then(dbPost => {
-      res.json(dbPost);
-    });
-  });
-};
+//   // PUT route for updating posts
+//   app.put("/api/posts", (req, res) => {
+//     db.UserQuestion.update(req.body, {
+//       where: {
+//         id: req.body.id
+//       }
+//     }).then(dbPost => {
+//       res.json(dbPost);
+//     });
+
+    };
