@@ -1,20 +1,20 @@
 module.exports = function (sequelize, DataTypes) {
-    const Post = sequelize.define("Post", {
+    const UserQuestion = sequelize.define("UserQuestion", {
         title: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        answer: {
             type: DataTypes.TEXT,
             allowNull: false,
-            validate: {
-                len: [1]
-            }
+        },
+        question: {
+            type: DataTypes.TEXT,
+            allowNull: false,
         }
-        
+
     });
-    return Post;
+
+    UserQuestion.associate = function(models){
+        UserQuestion.hasMany(models.UserAnswer, {
+            onDelete: "cascade"
+        });
+    };
+    return UserQuestion;
 };
