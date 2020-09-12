@@ -12,5 +12,9 @@ $(document).ready(function(){
 
     $("#answer-button").on("click", function(){
         $("#answer").html(currentQuestion.answer)
+        $("#example").html(currentQuestion.example)
     })
+
+    
+       
 })
