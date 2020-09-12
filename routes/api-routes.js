@@ -33,7 +33,7 @@ module.exports = function(app) {
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("/");
+    res.redirect("/"); // go back to home 
   });
 
   // Route for getting some data about our user to be used client side
@@ -92,9 +92,12 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post("/api/question", (req, res) => {
     console.log(req.body);
+
+
     db.UserQuestion.create({
       title: req.body.title,
       question: req.body.question
+
     }).then(dbPost => {
       res.json(dbPost);
     });
