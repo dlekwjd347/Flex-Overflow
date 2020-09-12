@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     var currentQuestion 
     $("#new-question").on("click", function(){
@@ -5,6 +6,7 @@ $(document).ready(function(){
             currentQuestion = question
             $("#question").html(question.question)
             $("#answer").empty()
+            $("#example").empty()
         })
     })
 
@@ -13,8 +15,5 @@ $(document).ready(function(){
         console.log(currentQuestion.example);
         $("#answer").html(currentQuestion.answer)
         $("#example").html(currentQuestion.example)
-    })
-
-    
-       
+    })     
 })
