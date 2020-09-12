@@ -1,4 +1,10 @@
+html{
+    background-color: #0B132B;
+}
 
+.site-wrapper {
+    background-color: #0B132B;
+}
 
 /* Intro Message */
 #banner{
@@ -6,7 +12,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding-top: 230px;
+    padding-top: 300px;
     /* height: 100vh; */
     /* background: #050801; */
     font-family: 'Lexend Deca', sans-serif;
