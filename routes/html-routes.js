@@ -6,18 +6,11 @@
 // =============================================================
 var path = require("path");
 var db = require("../models");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-//var router = require("express").Router();
 
-// Adding a little piece of middleware to check if a user is logged in
-var authCheck = function(req, res, next) {
-	if (!req.user) {
-		res.redirect('/landing');
-	}
-	else {
-		next();
-	}
-}
+
+
 
 
 // Routes
@@ -88,8 +81,19 @@ module.exports = function(app) {
 		});
 	});
 
+ // This is to pass back the affirmation. db.whatever.
+	app.get("/mainblog", isAuthenticated, (req, res) => {
+	  const handlebarsObject = {
+		userName: "Charlie",
+	  };
+	  console.log("in route get / ");
+	  res.render("index", handlebarsObject);
+	});
+  }; 
+
+
+
 	
-};
 
 
 

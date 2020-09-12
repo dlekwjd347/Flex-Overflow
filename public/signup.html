@@ -1,49 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
-  <title>Passport Authentication</title>
+  <title>Passport Authentication Sign Up Form</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="stylesheets/css/signup.css" rel="stylesheet">
 </head>
-
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+<!--<?php
+phpinfo();
+?>-->
+<!--
+<?php mysql_connect("host","username","password") or die(mysql_error());
+mysql_select_db("dbname") or die(mysql_error());?>
+-->
+<html>
+<!--font and jquery libs-->
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet"></link>
+  <!--finds font-->
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--untested-->
+  
+  <!--finds jquery lib-->
+</head>
+<body onload="">   
+  <div id="back"></div>
+    <figure>
+      <div class="button-container">
+        <div class="button" id="a0">L</div>
+        <div class="button" id="a1">O</div>
+        <div class="button" id="a2">A</div>
+        <div class="button" id="a3">D</div>
+        <div class="button" id="a4">I</div>
+        <div class="button" id="a5">N</div>
+        <div class="button" id="a6">G</div>
+        <div class="bar" id="loadLineleft"></div>
+        <div class="bar" id="line"></div>
+          <div id="back"></div>
       </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form class="signup">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
-        <br />
-        <p>Or log in <a href="/login">here</a></p>
-      </div>
-    </div>
+    </figure>  
+  
+<!---------------------------------------------------------->  
+  
+<!--mainscreen-->
+<div class="run">
+  <!--<body onload="load()">-->
+  <p class="welcome">FLEX OVERFLOW | LOGIN</p>
+  <!--form & buttons | mainscreen-->
+  <div id="fadeout">
+    <figure>
+      <!--double enforce relative posistioning-->
+      <!--groups what should fade out-->
+      <form id="form">
+        <input type="text" name="Username" maxlength="100" placeholder="Username" class="inputs">
+        <br>
+        <input type="password" name="Password" maxlength="100" placeholder="Password" class="inputs">
+        <br>
+        <input type="button" value="   LOGIN  " class="login" id="interact">
+      </form>
+      <button type="button" class="sign_up" id="interact" onclick="SignUp()">SIGN UP</button>
+    </figure>
   </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
-
+</div>
+<!--sign up screen-->
+<div id="SignUpA">
+  <p class="welcomeS">FLEX OVERFLOW | Sign up</p>
+  <figure>
+    <!--double enforce relative posistioning-->
+    <form id="formS">
+      <input id="email-input-signup" type="text" name="UsernameS" maxlength="100" placeholder="Username" class="inputs">
+      <br>
+      <input id="password-input-signup" type="password" name="PasswordS" maxlength="100" placeholder="Password" class="inputs">
+      <br>
+      <input id="signup-button" type="button" value="   SUBMIT  " class="sign_upS" id="interactS">
+    </form>
+    <button class="Back" onclick="Back()">BACK</button>
+  </figure>
+</div>
+</table>
+<button class="TableBack" onclick="TableBack()">BACK</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/signup2.js"></script>
 </body>
-
 </html>
