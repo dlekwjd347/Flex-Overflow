@@ -27,6 +27,10 @@ module.exports = function(app) {
 	    res.render("landing");
 	});
 
+	app.get("/questions", function(req, res) {
+	    res.sendFile(path.join(__dirname, "../public/q-n-a.html"));
+	});
+
 	app.get("/main", function(req, res) {
 		console.log("Before the get attempt");
 		var query = {};
