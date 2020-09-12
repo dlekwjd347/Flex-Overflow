@@ -12,9 +12,7 @@ $(document).ready(function() {
         }
 
         var newPost = {
-            body: postBodyInput.val().trim(),
-            postType: postTypeInput,
-            userId: userId
+            title: postBodyInput.val().trim(),
         }
 
         console.log(newPost);

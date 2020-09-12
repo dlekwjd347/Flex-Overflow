@@ -28,11 +28,11 @@ module.exports = function (app) {
   // });
 
   // This is to pass back the affirmation. db.whatever.
-  app.get("/members", isAuthenticated, (req, res) => {
+  app.get("/mainblog", isAuthenticated, (req, res) => {
     const handlebarsObject = {
       userName: "Charlie",
     };
     console.log("in route get / ");
-    res.render("members", handlebarsObject);
+    res.render("index", handlebarsObject);
   });
 };
