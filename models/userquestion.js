@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const UserQuestion = sequelize.define("UserQuestion", {
+    const Post = sequelize.define("Post", {
         title: {
             type: DataTypes.TEXT,
             allowNull: false,

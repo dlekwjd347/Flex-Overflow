@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/css/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="stylesheets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="stylesheets/fonts/flaticon/font/flaticon.css">
+    <link href="stylesheets/css/project.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stylesheets/css/jquery.fancybox.min.css">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>Flex Project Board</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Flex Overflow Project Board</h1>
+        <p>This project board showcases our inspiration, thought processes, and acceptance criteria as benchmarks for
+            our functional app.</p>
+    </div>
+    <div class="row p-body">
+        <div class="col-sm-12 pback">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">User Story</h3>
+                    <ul class="card-text u-body">As a coding student <br> I want to be able to post questions or answer
+                        questions of my fellow students. I also want to be able to quiz myself on possible interview
+                        questions. <br> So that I can be prepared for any new challenges. </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 pback">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Acceptance Criteria</h3>
+                    <ol class="card-text column">1. Given that, I go to the page in the browser, a launch page is open
+                        to initiate a log in with a "Get Started" button. </ol>
+                    <ol class="card-text column">2. Given that, I am taken to a log in page in which I log in for the
+                        first time, I am taken to a sign up page. </ol>
+                    <ol class="card-text column">3. Given that, the home page is a question posting page with a form box
+                        to input a question or answer other users' questions, with my profile panel on the side. </ol>
+                    <ol class="card-text column">4. Given that, I go to the randomize page, a new question is shown.
+                        When the "show answer" button is clicked, the corresponding answer is displayed. When the "new
+                        random question" button is clicked, a new question is displayed. </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="wireframe container">
+     <!--MODAL 1-->
+     <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 portfoliocardtop">
+        <div class="portfolio-item post-entry-1 h-100 portfoliocard animate__animated animate__slideInUp">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid portcover modalcover modalbox" src="/assets/images/wireframe1-1.JPG" alt="" />
+            </a>
+            <div class="post-entry-1-contents">
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">Wire Frame 1</div>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--MODAL 2-->
+    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 portfoliocardtop">
+        <div class="portfolio-item post-entry-1 h-100 portfoliocard animate__animated animate__slideInUp">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid portcover modalcover modalbox" src="/assets/images/wireframe2-2.JPG" alt="" />
+            </a>
+            <div class="post-entry-1-contents">
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">Wire Frame 2</div>
+            </div>
+            </div>
+        </div>
+    </div>
+      <!--MODAL 3-->
+    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 portfoliocardtop">
+        <div class="portfolio-item post-entry-1 h-100 portfoliocard animate__animated animate__slideInUp">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid portcover modalcover modalbox" src="/assets/images/wireframe3-3.JPG" alt="" />
+            </a>
+            <div class="post-entry-1-contents">
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">Wire Frame 3</div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    <!-- Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal"><img src="stylesheets/fonts/flaticon/font/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here-->
+                                <h3 class="text-uppercase">Wire Frame 1</h3>
+                                <img class="img-fluid d-block mx-auto modalimage-1" src="/assets/images/wireframe1.JPG" alt="" />
+                                <p class="modaltext">1. Landing page</p>
+                                <p class="modaltext">2. Log in/Sign up page</p>
+                                <p class="modaltext">3. Main question post page</p>
+                                <p class="modaltext">4. Random question and answer quiz page</p>
+                                <p class="modaltext">5. About Us page</p>
+                                <p class="modaltext">6. Project Details: Acceptance Criteria, User Story, and Wire Frames</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal"><img src="stylesheets/fonts/flaticon/font/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here-->
+                                <h3 class="text-uppercase">Wire Frame 2</h3>
+                                <img class="img-fluid d-block mx-auto modalimage-1" src="/assets/images/wireframe2.JPG" alt="" />
+                                <p class="modaltext">7. Contact form page</p>
+                                <p class="modaltext">8. Log out page</p>
+                                <p class="modaltext">9. Log in/Sign up page (Mobile)</p>
+                                <p class="modaltext">10. Main question post page (Mobile)</p>
+                                <p class="modaltext">11. Random question and answer quiz page (Mobile)</p>
+                                <p class="modaltext">12. About Us page (Mobile)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal"><img src="stylesheets/fonts/flaticon/font/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here-->
+                                <h3 class="text-uppercase">Wire Frame 3</h3>
+                                <img class="img-fluid d-block mx-auto modalimage-2" src="/assets/images/wireframe3.JPG" alt="" />
+                                <p class="modaltext">13. Project Details: Acceptance Criteria, User Story, and Wire Frames (Mobile)</p>
+                                <p class="modaltext">14. Contact form page (Mobile)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
