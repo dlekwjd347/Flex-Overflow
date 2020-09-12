@@ -1,4 +1,3 @@
-console.log("hello")
 
 $(document).ready(function(){
     var currentQuestion 
@@ -7,14 +6,14 @@ $(document).ready(function(){
             currentQuestion = question
             $("#question").html(question.question)
             $("#answer").empty()
+            $("#example").empty()
         })
     })
 
     $("#answer-button").on("click", function(){
+        console.log(currentQuestion.answer);
+        console.log(currentQuestion.example);
         $("#answer").html(currentQuestion.answer)
         $("#example").html(currentQuestion.example)
-    })
-
-    
-       
+    })     
 })
