@@ -2,7 +2,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Iloverocky21!",
+    "password": "rootpassword",
     "database": "fof_db",
     "host": "127.0.0.1",
     "port": 3306,
@@ -21,7 +21,15 @@
   },
   "lizComputer":{
     "username": "root",
-    "password": "Iloverocky21!",
+    "password": "rootpassword",
+    "database": "fof_db",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "sarahComputer":{
+    "username": "root",
+    "password": "rootpassword",
     "database": "fof_db",
     "host": "127.0.0.1",
     "port": 3306,
