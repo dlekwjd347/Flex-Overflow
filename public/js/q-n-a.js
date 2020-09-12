@@ -1,5 +1,3 @@
-console.log("hello")
-
 $(document).ready(function(){
     var currentQuestion 
     $("#new-question").on("click", function(){
@@ -11,6 +9,8 @@ $(document).ready(function(){
     })
 
     $("#answer-button").on("click", function(){
+        console.log(currentQuestion.answer);
+        console.log(currentQuestion.example);
         $("#answer").html(currentQuestion.answer)
         $("#example").html(currentQuestion.example)
     })
