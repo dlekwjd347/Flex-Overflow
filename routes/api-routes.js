@@ -97,6 +97,7 @@ module.exports = function(app) {
     }).then(dbPost => {
       res.json(dbPost);
     });
+  });
 
   // DELETE route for deleting posts
   app.delete("/api/posts/:id", (req, res) => {
@@ -119,4 +120,4 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
-})};
+  };

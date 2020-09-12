@@ -15,9 +15,12 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 // Routes
 // =============================================================
+
+
+
 module.exports = function(app) {
 	app.get("/", function(req, res) {
-	    res.render("landing");
+	    res.render("landing", {layout: "landing"});
 	});
 
 	app.get("/questions", function(req, res) {
@@ -77,9 +80,29 @@ module.exports = function(app) {
 				user: req.user
 			}
 
-			res.render("landing", hbsObject);		
+			res.render("landing", hbsObject);	
 		});
 	});
+
+//johnson's
+
+
+	app.get("/", (req, res) => {
+		// If the user already has an account send them to the main blog page
+		if (req.user) {
+		  res.redirect("/index");
+		}
+		res.sendFile(path.join(__dirname, "landing.html"));
+	  });
+	
+	  app.get("/login", (req, res) => {
+		// If the user already has an account send them to the main blog page
+		if (req.user) {
+		  res.redirect("/index");
+		}
+		res.sendFile(path.join(__dirname, "signup.html"));
+	  });
+
 
  // This is to pass back the affirmation. db.whatever.
 	app.get("/mainblog", isAuthenticated, (req, res) => {
