@@ -5,6 +5,10 @@ body, h1 {
     text-align: center;
 }
 
+.title-span, .portfolio-caption-heading, .card-title {
+    color: #F3DE8A;
+}
+
 body {
     margin-bottom: 100px;
 }
@@ -12,6 +16,7 @@ body {
 p {
     color: #3A506B
 }
+
 
 .pback {
     background-color: #1c2541;
@@ -22,7 +27,7 @@ p {
     margin-right: 80px;
     margin-left: 80px;
     border-style: solid;
-    border-color: white;
+    border-color: #F3DE8A;
     border-width: .75px;
 }
 
@@ -30,11 +35,6 @@ p {
     float: left;
     width: 50%;
 
-}
-
-
-.card-title {
-    color: #5BC0BE;
 }
 
 .card-text {
