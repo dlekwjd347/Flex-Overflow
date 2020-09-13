@@ -64,7 +64,7 @@ module.exports = function(app) {
             where: {
                 UserId: req.params.id
             },
-            questionId: req.body.query,
+            // questionId: req.body.query,
             body: req.body.body,
             UserId: req.body.userId
         }).then(function(results) {
