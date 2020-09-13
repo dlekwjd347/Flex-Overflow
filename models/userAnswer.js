@@ -4,13 +4,8 @@ module.exports = function (sequelize, DataTypes) {
     const UserAnswer = sequelize.define("UserAnswer", {
 
         question_id: {
-<<<<<<< HEAD
-            type: DataTypes.INT,
-            allowNull: false,
-=======
-        type: DataTypes.INT,
+        type: DataTypes.INTEGER,
         allowNull: false,
->>>>>>> 5feba26388056d344f7064ed337fc00a4349753a
         },
         answer: {
             type: DataTypes.TEXT,
