@@ -95,6 +95,32 @@ module.exports = function(app) {
 		  res.redirect("/index");
 		}
 		res.sendFile(path.join(__dirname, "signup.html"));
+
+		
+	  });
+	  app.get("/assets/images/wireframe1-1.JPG", function(req, res){
+		res.writeHead(200, {'Content-Type': 'image/jpeg'});
+		res.end("wireframe1-1.JPG");
+	  });
+	  app.get("/assets/images/wireframe1.JPG", function(req, res){
+		res.writeHead(200, {'Content-Type': 'image/jpeg'});
+		res.end("wireframe1.JPG");
+	  });
+	  app.get("/assets/images/wireframe2-2.JPG", function(req, res){
+		res.writeHead(200, {'Content-Type': 'image/jpeg'});
+		res.end("wireframe2-2.JPG");
+	  });
+	  app.get("/assets/images/wireframe2.JPG", function(req, res){
+		res.writeHead(200, {'Content-Type': 'image/jpeg'});
+		res.end("wireframe2.JPG");
+	  });
+	  app.get("/assets/images/wireframe3-3.JPG", function(req, res){
+		res.writeHead(200, {'Content-Type': 'image/jpeg'});
+		res.end("wireframe1-3.JPG");
+	  });
+	  app.get("/assets/images/wireframe3.JPG", function(req, res){
+		res.writeHead(200, {'Content-Type': 'image/jpeg'});
+		res.end("wireframe3.JPG");
 	  });
 
 
