@@ -15,7 +15,6 @@ $(document).ready(function () {
     var newPost = {
         title: postBodyInput.val().trim(),
         postType: postTypeInput,
-        userId: userId
     }
 
     console.log(newPost);
@@ -40,7 +39,6 @@ $(".comment-submit").on("click", function () {
     var newComment = {
         body: commentBodyInput.val().trim(),
         postId: postId,
-        userId: userId
     }
     console.log(newComment);
     submitComment(newComment);
