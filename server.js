@@ -26,6 +26,8 @@ app.use(passport.session());
 var exphbs = require("express-handlebars");
 var Handlebars = require("handlebars");
 
+
+
 // Use Handlebars as the default view engine
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");

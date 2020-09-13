@@ -38,7 +38,27 @@
 </nav>
   </div>
 
+<div>
+  {{#each questions}}
+  <p>{{title}}</p>
+  {{/each}}
+  </div>
+  {{!-- TITLE OF QUESTION  --}}
+  <div class="col-md-9">
 
+    <ul class="list-group media-list media-list-stream">
+
+      <li class="media list-group-item question p-a">
+         <div class="input-group">
+          <input type="text" class="form-control post-body-class" id="post-body" placeholder="Title of Your Question">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default post-button" id="post-submit">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </li>
+</div>
   {{!-- ASK YOUR QUESTION SECTION  --}}
   <div class="col-md-9">
 
