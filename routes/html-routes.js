@@ -8,15 +8,8 @@ var path = require("path");
 var db = require("../models");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-
-
-
-
-
 // Routes
 // =============================================================
-
-
 
 module.exports = function(app) {
 	app.get("/", function(req, res) {
@@ -31,28 +24,28 @@ module.exports = function(app) {
 	    res.sendFile(path.join(__dirname, "../public/aboutus.html"));
 	});
 
-	app.get("/main", function(req, res) {
+	app.get("/index", function(req, res) {
 		console.log("Before the get attempt");
 		var query = {};
-		db.Post.findAll({
+		db.UserQuestion.findAll({
 			where: query,
 			include: [
                 db.User, 
                 {
-                    model: db.Comment,
+                    model: db.UserAnswer,
 					include: [ db.User],
                 }
 			],
 			order: [
 				['createdAt', 'DESC'],
-				[db.Comment, 'createdAt', 'ASC']	
+				[db.UserAnswer, 'createdAt', 'ASC']	
             ]
 			}).then(posts => {
-			var hbsObject = {
-				hbPosts: posts,
+			var indexObject = {
+				indexPosts: posts,
 				user: req.user
 			}
-			res.render("main", hbsObject);		
+			res.render("index", indexObject);		
 		});
 	});
 
@@ -60,31 +53,28 @@ module.exports = function(app) {
 		console.log("Before the get attempt");
 		// console.log(req.user);
 		var query = {};
-        // if (req.query.user_id) {
-        //   query.UserId = req.query.user_id;
-        // }
-		db.Post.findAll({
-			where: {
+		db.UserQuestion.findAll({
+			where: { 
 				id: req.params.id
 			},
 			order: [
 				['createdAt', 'DESC'],
-				[db.Comment, 'createdAt', 'ASC']	
+				[db.UserAnswer, 'createdAt', 'ASC']	
             ],
 			include: [
                 db.User, 
                 {
-					model: db.Comment,
+					model: db.UserAnswer,
 					include: [ db.User]
                 }
 			]
 			}).then(posts => {
-			var hbsObject = {
-				hbPosts: posts,
+			var indexObject = {
+				indexPosts: posts,
 				user: req.user
 			}
 
-			res.render("landing", hbsObject);	
+			res.render("landing", indexObject);	
 		});
 	});
 
@@ -108,7 +98,7 @@ module.exports = function(app) {
 	  });
 
 
- // This is to pass back the affirmation. db.whatever.
+ // This is to keep track of the user's current log in status and authenticate 
 	app.get("/mainblog", isAuthenticated, (req, res) => {
 	  const handlebarsObject = {
 		userName: "Charlie",

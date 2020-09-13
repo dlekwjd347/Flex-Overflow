@@ -55,18 +55,18 @@
         </div>
       </li>
 
-      {{#each hbPosts}}
+      {{#each indexPost}}
       <li class="media list-group-item p-a">
-        <a class="media-left" href="/profile/{{User.id}}">
-          <img class="panel-post-profile-img" src="{{User.profileImgUrl}}">
+        {{!-- <a class="media-left" href="/profile/{{User.id}}">
+          <img class="panel-post-profile-img" src="{{User.profileImgUrl}}"> --}}
         </a>
         <div class="media-body">
           <div class="media-heading">
             <h5>
-              {{#if User.firstName}}
-                {{User.firstName}} {{User.lastName}}
+              {{#if User.email}}
+                {{User.email}}
               {{else}}
-                {{User.username}}
+                {{User.email}}
               {{/if}}
               <small class="pull-right text-muted">{{createdAt}}</small>
             </h5>
@@ -76,10 +76,10 @@
           </p>
 
         <ul class="media-list m-b">
-          {{#each Comments}}
+          {{#each UserAnswer}}
           <li class="media">
-            <a class="media-left" href="/profile/{{User.id}}">
-              <img class="panel-comment-profile-img" src="{{User.profileImgUrl}}">
+            {{!-- <a class="media-left" href="/profile/{{User.id}}">
+              <img class="panel-comment-profile-img" src="{{User.profileImgUrl}}"> --}}
             </a>
             <div class="media-body">
                 <h6>
@@ -123,7 +123,7 @@
 
 <script type="text/javascript">
 var userId;
-$(document).ready(function() {
+{{!-- $(document).ready(function() {
   $.ajax({
     url: "/auth/getuser",
     type: "GET"
@@ -131,5 +131,5 @@ $(document).ready(function() {
     console.log(result);
     userId = result.id;
   });
-});
+}); --}}
 </script> 

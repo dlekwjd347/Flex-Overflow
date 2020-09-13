@@ -110,8 +110,8 @@
               </a>
               <div class="media-body">
                   <h6>
-                    {{#if User.firstName}}
-                      {{User.firstName}} {{User.lastName}}
+                    {{#if UserQuestion.firstName}}
+                      {{UserQuestion.firstName}} {{User.lastName}}
                     {{else}}
                       {{User.username}}
                     {{/if}}
@@ -151,16 +151,16 @@
   <script type="text/javascript">
   var userId;
   
-  $(document).ready(function() {
+  // $(document).ready(function() {
   
-    $.ajax({
-      url: "/auth/getuser",
-      type: "GET"
-    }).done(function(result) {
-      console.log(result);
-      userId = result.id;
-    });
-  });
+  //   $.ajax({
+  //     url: "/auth/getuser",
+  //     type: "GET"
+  //   }).done(function(result) {
+  //     console.log(result);
+  //     userId = result.id;
+  //   });
+  // });
   
   </script>
 

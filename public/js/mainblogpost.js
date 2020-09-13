@@ -4,16 +4,18 @@ $(document).ready(function () {
     var postTypeInput = "status-update";
 
     $("#post-submit").on("click", function () {
-        event.preventDefault();
+     event.preventDefault();
         // Wont submit the post if we are missing a body
         if (!postBodyInput.val().trim()) {
-            return;
+            return ;
         }
     });
 
 
     var newPost = {
         title: postBodyInput.val().trim(),
+        postType: postTypeInput,
+        userId: userId
     }
 
     console.log(newPost);
@@ -48,13 +50,13 @@ $(".comment-body").keydown(function (e) {
         $(".comment-submit").click();
     }
 });
-function submitPost(Post) {
-    $.post("/api/posts/", Post, function () {
+function submitPost(UserQuestion) {
+    $.post("/api/posts/", UserQuestion, function () {
         location.reload();
     });
 }
-function submitComment(Comment) {
-    $.post("/api/comment/", Comment, function () {
+function submitComment(UserAnswer) {
+    $.post("/api/comment/", UserAnswer, function () {
         location.reload();
     });
 }
