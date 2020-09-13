@@ -1,3 +1,5 @@
+//seeded questions for random question and answer functionality
+
 module.exports = function(sequelize, DataTypes) {
   const questionSet = sequelize.define("questionSet", {
     question: {

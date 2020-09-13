@@ -35,14 +35,6 @@
     "port": 3306,
     "dialect": "mysql"
   },
-  "bobbyComputer":{
-    "username": "root",
-    "password": "Gilmore24!",
-    "database": "fof_db",
-    "host": "127.0.0.1",
-    "port": 3306,
-    "dialect": "mysql"
-  },
   "johnsonComputer":{
     "username": "root",
     "password": "Iloverocky21!",

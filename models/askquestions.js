@@ -1,11 +1,10 @@
+//johnson's question model
+
 module.exports = function (sequelize, DataTypes) {
     const AskQuestions = sequelize.define("AskQuestions", {
         title: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
+            allowNull: false
         }
     });
     return AskQuestions;

@@ -5,6 +5,14 @@ body, h1 {
     text-align: center;
 }
 
+h1 {
+    font-family: 'Monda', sans-serif;
+    text-shadow: 2px 2px darkblue;
+    font-style: italic;
+    color: #6FFFE9;
+    font-size: 30px;
+}
+
 body {
     margin-bottom: 100px;
 }
@@ -34,7 +42,12 @@ p {
 
 
 .card-title {
-    color: #5BC0BE;
+    margin-bottom: 17px;
+    margin-top: 40px;
+    text-decoration: underline;
+    color: #5BC3EB;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px #BFD7FF;
 }
 
 .card-text {
