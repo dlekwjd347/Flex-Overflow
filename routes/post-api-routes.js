@@ -1,4 +1,5 @@
 // Requiring our models
+// API Routes to only post questions 
 var db = require("../models");
 
 module.exports = function(app) {
@@ -7,20 +8,16 @@ module.exports = function(app) {
     app.get("/api/posts/", function(req, res) {
         console.log("/api/posts call made");
         var query = {};
-        if (req.query.user_id) {
-          query.UserId = req.query.user_id;
-        }
-        db.Post.findAll({
+        db.UserQuestion.findAll({
             where: query,
             order: [
 				['createdAt', 'DESC'],
-				[db.Comment, 'createdAt', 'ASC']	
+				[db.UserAnswer, 'createdAt', 'ASC']	
             ],
             include: [
-                db.User, 
+                db.UserQuestion, 
                 {
-                    model: db.Comment,
-                    include: [ db.User],
+                    model: db.UserAnswer
                 }
             ]
             }).then(function(dbPost) {
@@ -30,22 +27,19 @@ module.exports = function(app) {
 
     app.get("/api/posts/:id", function(req, res) {
         // GET route for only getting a specific userId's posts.
-        db.Post.findOne({
-            where: {
-            UserIs: req.params.id
-            },
+        db.UserQuestion.findOne({
             order: [
 				['createdAt', 'DESC'],
-				[db.Comment, 'createdAt', 'ASC']	
+				[db.UserAnswer, 'createdAt', 'ASC']	
             ],
             include: [
-                db.User,
+                db.UserQuestion,
                 {
-                    model: db.Comment,
+                    model: db.UserAnswer,
                     // order: [
                     //     [model.Comment, 'createdAt', 'DESC']
                     // ],
-                    include: [ db.User],
+                    include: [ db.UserQuestion],
                 }
             ]
         }).then(function(dbPost) {
@@ -55,27 +49,36 @@ module.exports = function(app) {
 
     app.post("/api/posts/", function(req, res) {
         console.log("/api/posts call made");
-        db.Post.create({
-            body: req.body.body,
-            postType: req.body.postType,
-            UserId: req.body.userId
+        db.UserQuestion.create({
+            question: req.body.question
         }).then(function(dbPost) {
             res.json(dbPost);
         });
     });
 
-    app.post("/api/comment/", function(req, res) {
-        console.log("/api/comment call made");
-        db.Comment.create({
+    app.post("/api/answer/", function(req, res) {
+        console.log("/api/answer call made");
+        var query = connection.query("Select id FROM fof_db.UserQuestion;", function(err, results) {
+            if (err) throw err;
+        db.UserAnswer.create({
             where: {
-                UserIs: req.params.id
+                UserId: req.params.id
             },
-            PostId: req.body.postId,
+            questionId: req.body.query,
             body: req.body.body,
             UserId: req.body.userId
-        }).then(function(dbComment) {
-            console.log("Comment created!")
-            res.json(dbComment);
+        }).then(function(results) {
+            console.log("Answer added!")
+            res.json(results);
         });
+    })
+});
+
+app.post("/api/answer/", function(req, res) {
+    db.UserAnswer.create(req.body).then(function(dbAnswer) {
+      res.json(dbAnswer);
     });
-}
+  });
+
+
+};
