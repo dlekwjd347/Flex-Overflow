@@ -2,11 +2,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "rootpassword",
-=======
-    "password": null,
->>>>>>> ea8a8e43f9f5892ab140ebebbb9942ce0e9f1fc2
     "database": "fof_db",
     "host": "127.0.0.1",
     "port": 3306,
