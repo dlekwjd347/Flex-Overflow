@@ -3,6 +3,8 @@ $(document).ready(function () {
     var postBodyInput = $("#post-body");
     var postTypeInput = "status-update";
 
+
+
     $("#post-submit").on("click", function () {
      event.preventDefault();
      console.log("CLICKed")
