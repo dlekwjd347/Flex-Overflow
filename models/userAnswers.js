@@ -1,26 +1,26 @@
-//sarah's answer model: each answer belongs to one question
+//sarah's answer model: each answer belongs to one question // good
 
 module.exports = function (sequelize, DataTypes) {
-    const UserAnswer = sequelize.define("UserAnswer", {
+    const UserAnswers = sequelize.define("UserAnswers", {
 
         // question_id: {
         //     type: DataTypes.INT,
         //     allowNull: false,
         // },
-        answer: {
+        body: {
             type: DataTypes.TEXT,
             allowNull: false
         }
 
     });
 
-    UserAnswer.associate = function(models){
-        UserAnswer.belongsTo(models.UserQuestion, {
+    UserAnswers.associate = function(models){
+        UserAnswers.belongsTo(models.UserQuestions, {
             foreignKey: {
-                allowNull: false
+                allowNull: true
             }
         });
     };
 
-    return UserAnswer;
+    return UserAnswers;
 };

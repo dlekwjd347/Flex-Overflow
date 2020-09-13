@@ -27,18 +27,18 @@ module.exports = function(app) {
 	app.get("/index", function(req, res) {
 		console.log("Before the get attempt");
 		var query = {};
-		db.UserQuestion.findAll({
+		db.UserQuestions.findAll({
 			where: query,
 			include: [
                 db.User, 
                 {
-                    model: db.UserAnswer,
+                    model: db.UserAnswers,
 					include: [ db.User],
                 }
 			],
 			order: [
 				['createdAt', 'DESC'],
-				[db.UserAnswer, 'createdAt', 'ASC']	
+				[db.UserAnswers, 'createdAt', 'ASC']	
             ]
 			}).then(posts => {
 			var indexObject = {
@@ -53,18 +53,18 @@ module.exports = function(app) {
 		console.log("Before the get attempt");
 		// console.log(req.user);
 		var query = {};
-		db.UserQuestion.findAll({
+		db.UserQuestions.findAll({
 			where: { 
 				id: req.params.id
 			},
 			order: [
 				['createdAt', 'DESC'],
-				[db.UserAnswer, 'createdAt', 'ASC']	
+				[db.UserAnswers, 'createdAt', 'ASC']	
             ],
 			include: [
                 db.User, 
                 {
-					model: db.UserAnswer,
+					model: db.UserAnswers,
 					include: [ db.User]
                 }
 			]

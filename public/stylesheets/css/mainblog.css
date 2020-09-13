@@ -1,0 +1,68 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #0B132B;
+}
+
+.landing-container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100%;
+}
+
+.navbar-inverse {
+    background-color: #1C2541;
+    border-color: #3A506B;
+}
+
+.navbar-brand {
+    width: 115px;
+}
+
+
+
+
+.panel-profile-img {
+    border-radius: 15%;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+
+.panel-post-profile-img {
+    border-radius: 15%;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    height: 60px;
+    width: 60px;
+}
+
+.panel-comment-profile-img {
+    border-radius: 15%;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    height: 40px;
+    width: 40px;
+}
+
+
+/* .panel-title {
+    margin-top: 10px;
+} */
+
+
+
+
+.horizontal-scroll {
+    overflow: auto;
+    white-space: nowrap;
+}

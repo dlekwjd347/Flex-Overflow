@@ -1,7 +1,7 @@
 //sarah's question model with associate: each question has many answers 
 
 module.exports = function (sequelize, DataTypes) {
-    const UserQuestion = sequelize.define("UserQuestion", {
+    const userQuestions = sequelize.define("userQuestions", {
         title: {
             type: DataTypes.TEXT,
             allowNull: false,
@@ -13,10 +13,10 @@ module.exports = function (sequelize, DataTypes) {
 
     });
 
-    UserQuestion.associate = function(models){
-        UserQuestion.hasMany(models.UserAnswer, {
+    userQuestions.associate = function(models){
+        userQuestions.hasMany(models.userAnswers, {
             onDelete: "cascade"
         });
     };
-    return UserQuestion;
+    return userQuestions;
 };

@@ -4,22 +4,22 @@ var db = require("../models");
 module.exports = function(app) {
 
     // GET route for getting all of the posts
-    app.get("/api/posts/", function(req, res) {
-        console.log("/api/posts call made");
+    app.get("/api/userQuestions/", function(req, res) {
+        console.log("/api/question call made");
         var query = {};
         if (req.query.user_id) {
           query.UserId = req.query.user_id;
         }
-        db.Post.findAll({
+        db.UserQuestions.findAll({
             where: query,
             order: [
 				['createdAt', 'DESC'],
-				[db.Comment, 'createdAt', 'ASC']	
+				[db.UserAnswers, 'createdAt', 'ASC']	
             ],
             include: [
                 db.User, 
                 {
-                    model: db.Comment,
+                    model: db.UserAnswers,
                     include: [ db.User],
                 }
             ]
@@ -28,20 +28,20 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/api/posts/:id", function(req, res) {
+    app.get("/api/userQuestions/:id", function(req, res) {
         // GET route for only getting a specific userId's posts.
-        db.Post.findOne({
+        db.UserQuestions.findOne({
             where: {
             UserIs: req.params.id
             },
             order: [
 				['createdAt', 'DESC'],
-				[db.Comment, 'createdAt', 'ASC']	
+				[db.UserAnswers, 'createdAt', 'ASC']	
             ],
             include: [
                 db.User,
                 {
-                    model: db.Comment,
+                    model: db.UserAnswers,
                     // order: [
                     //     [model.Comment, 'createdAt', 'DESC']
                     // ],
@@ -53,9 +53,9 @@ module.exports = function(app) {
         });
     });
 
-    app.post("/api/posts/", function(req, res) {
-        console.log("/api/posts call made");
-        db.Post.create({
+    app.post("/api/userQuestions/", function(req, res) {
+        console.log("/api/questions call made");
+        db.UserQuestions.create({
             body: req.body.body,
             postType: req.body.postType,
             UserId: req.body.userId
@@ -64,13 +64,13 @@ module.exports = function(app) {
         });
     });
 
-    app.post("/api/comment/", function(req, res) {
-        console.log("/api/comment call made");
-        db.Comment.create({
+    app.post("/api/userAnswer/", function(req, res) {
+        console.log("/api/userAnswer call made");
+        db.UserAnswer.create({
             where: {
                 UserIs: req.params.id
             },
-            PostId: req.body.postId,
+            UserQuestionId: req.body.postId,
             body: req.body.body,
             UserId: req.body.userId
         }).then(function(dbComment) {
