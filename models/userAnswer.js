@@ -1,3 +1,5 @@
+//sarah's answer model: each answer belongs to one question
+
 module.exports = function (sequelize, DataTypes) {
     const UserAnswer = sequelize.define("UserAnswer", {
 

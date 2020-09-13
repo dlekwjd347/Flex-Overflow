@@ -2,7 +2,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Dlekwjd347",
+    "password": null,
     "database": "fof_db",
     "host": "127.0.0.1",
     "port": 3306,
@@ -30,14 +30,6 @@
   "sarahComputer":{
     "username": "root",
     "password": "rootpassword",
-    "database": "fof_db",
-    "host": "127.0.0.1",
-    "port": 3306,
-    "dialect": "mysql"
-  },
-  "bobbyComputer":{
-    "username": "root",
-    "password": "Gilmore24!",
     "database": "fof_db",
     "host": "127.0.0.1",
     "port": 3306,
