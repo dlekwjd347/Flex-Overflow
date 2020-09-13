@@ -12,7 +12,7 @@ html{
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding-top: 300px;
+    padding-top: 240px;
     /* height: 100vh; */
     /* background: #050801; */
     font-family: 'Lexend Deca', sans-serif;
@@ -133,4 +133,8 @@ html{
 
 
 
-
+@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+    body {
+      background: #ccc;
+    }
+  }
