@@ -7,9 +7,13 @@
     font-weight: bold;
     font-size: 40px;
     letter-spacing: 2px;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Ruda', sans-serif;
 }
 
+.navtitle{
+    font-family: 'Chakra Petch', sans-serif;
+    font-style: italic;
+}
 nav {
     top: auto;
     position: initial;
