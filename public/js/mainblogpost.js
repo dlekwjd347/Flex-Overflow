@@ -5,11 +5,12 @@ $(document).ready(function () {
 
     $("#post-submit").on("click", function () {
      event.preventDefault();
+     console.log("CLICKed")
         // Wont submit the post if we are missing a body
         if (!postBodyInput.val().trim()) {
             return ;
         }
-    });
+
 
 
     var newPost = {
@@ -24,7 +25,7 @@ $(document).ready(function () {
 
 $("#post-body").keydown(function (e) {
     if (e.keyCode == 13) {
-        $("#post-submit").click();
+      //  $("#post-submit").click();
     }
 });
 
@@ -61,3 +62,4 @@ function submitComment(UserAnswer) {
     });
 }
 
+})
