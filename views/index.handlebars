@@ -13,143 +13,86 @@
     </div>
     <div class="navbar-collapse collapse" id="navbar-collapse-main">
 
+      <ul class="nav navbar-nav hidden-xs">
+        <li class="active">
+          <a href="/index">Home</a>
+        </li>
+
         <ul class="nav navbar-nav hidden-xs">
           <li class="active">
-            <a href="/index">Home</a>
+            <a href="/q-n-a.html">Interview Question</a>
           </li>
 
-          {{#if user}}
-          <li>
-           <a href="/auth/logout" id="profile-link">Logout</a>
-          </li>
-          {{/if}}
+          <ul class="nav navbar-nav hidden-xs">
+            <li class="active">
+              <a href="/aboutus.html">About Us</a>
+            </li>
 
-        </ul>
+            <ul class="nav navbar-nav hidden-xs">
+              <li class="active">
+                <a href="/project.html">Project Board</a>
+              </li>
 
-        <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
-          <li>
-            <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
-              <img class="panel-comment-profile-img" id="my-profile-img" src="{{user.profileImgUrl}}">
-            </button>
-          </li>
-        </ul>
-      </div>
+              {{#if user}}
+              <li>
+                <a href="/auth/logout" id="profile-link">Logout</a>
+              </li>
+              {{/if}}
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+              <li>
+                <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+                  <img class="panel-comment-profile-img" id="my-profile-img" src="{{user.profileImgUrl}}">
+                </button>
+              </li>
+            </ul>
+    </div>
   </div>
 </nav>
-  </div>
+
+
+{{!-- TITLE OF QUESTION    sarah's attempt  --}}
+<div class="col-md-9">
+
+  <ul class="list-group media-list media-list-stream">
+
+    <li class="media list-group-item question p-a">
+      <div class="input-group">
+        <input type="text" class="form-control post-body-class" id="post-body" placeholder="Ask Your Question">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default post-button" id="post-submit">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </li>
+</div>
+
 
 <div>
-  {{#each questions}}
-  <p>{{title}}</p>
-  {{/each}}
-  </div>
-  {{!-- TITLE OF QUESTION  --}}
-  <div class="col-md-9">
-
-    <ul class="list-group media-list media-list-stream">
-
-      <li class="media list-group-item question p-a">
-         <div class="input-group">
-          <input type="text" class="form-control post-body-class" id="post-body" placeholder="Title of Your Question">
-          <div class="input-group-btn">
-            <button type="button" class="btn btn-default post-button" id="post-submit">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-      </li>
-</div>
-  {{!-- ASK YOUR QUESTION SECTION  --}}
-  <div class="col-md-9">
-
-    <ul class="list-group media-list media-list-stream">
-
-      <li class="media list-group-item question p-a">
-         <div class="input-group">
-          <input type="text" class="form-control post-body-class" id="post-body" placeholder="Ask your question">
-          <div class="input-group-btn">
-            <button type="button" class="btn btn-default post-button" id="post-submit">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-      </li>
-
-      {{#each indexPosts}}
-      <li class="media list-group-item p-a">
-        {{!-- <a class="media-left" href="/profile/{{User.id}}">
-          <img class="panel-post-profile-img" src="{{User.profileImgUrl}}"> --}}
-        </a>
-        <div class="media-body">
-          <div class="media-heading">
-            <h5>
-              {{#if User.email}}
-                {{User.email}}
-              {{else}}
-                {{User.email}}
-              {{/if}}
-              <small class="pull-right text-muted">{{createdAt}}</small>
-            </h5>
-          </div>
-          <p>
-            {{body}}
-          </p>
-
-        <ul class="media-list m-b">
-          {{#each indexPosts}}
-          <li class="media">
-            {{!-- <a class="media-left" href="/profile/{{User.id}}">
-              <img class="panel-comment-profile-img" src="{{User.profileImgUrl}}"> --}}
-            </a>
-            <div class="media-body">
-                <h6>
-                  {{#if User.firstName}}
-                    {{User.firstName}} {{User.lastName}}
-                  {{else}}
-                    {{User.username}}
-                  {{/if}}
-                  <small class="pull-right text-muted">{{createdAt}}</small>
-                </h6>
-                <p>
-                  {{body}}
-                </p>
-            </div>
-          </li>
-
-
-          {{!-- COMMENT BUTTON SECTION --}}
-          {{/each}}
-          <li class="media list-group-item p-a-2">
-            <div class="input-group">
-              <input type="text" class="form-control comment-body" id="post-{{id}}" data-postid="{{id}}" placeholder="Message">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default comment-submit" id="{{id}}">
-                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        </div>
-      </li>
+  {{#each QuestionsArr}}
+      <h3>{{this.question}}</h3>
+      {{#each QuestionsArr}} {{!-- nested each: the answer array is going to be looped while the question array is looped --}}
+      <h4>{{this.answer}}</h4>
       {{/each}}
-    </ul>
-
-  </div>
+      <ul class="list-group media-list media-list-stream">
+    <li class="media list-group-item p-a-2">
+      <div class="input-group">
+        <input type="text" class="form-control comment-body" id="post-{{id}}" data-postid="{{id}}" placeholder="Answer">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default comment-submit" id="{{id}}">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+  {{/each}}
 </div>
+
+
 
 <!-- Custom Script -->
 <script src="/js/mainblogpost.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-var userId;
-{{!-- $(document).ready(function() {
-  $.ajax({
-    url: "/auth/getuser",
-    type: "GET"
-  }).done(function(result) {
-    console.log(result);
-    userId = result.id;
-  });
-}); --}}
-</script> 

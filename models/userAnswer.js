@@ -2,7 +2,6 @@
 
 module.exports = function (sequelize, DataTypes) {
     const UserAnswer = sequelize.define("UserAnswer", {
-
         answer: {
             type: DataTypes.TEXT,
             allowNull: false

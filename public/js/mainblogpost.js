@@ -16,9 +16,7 @@ $(document).ready(function () {
 
 
     var newPost = {
-        title: postBodyInput.val().trim(),
-        postType: postTypeInput,
-        userId: userId
+        question: postBodyInput.val().trim(),
     }
 
     console.log(newPost);
@@ -42,8 +40,8 @@ $(".comment-submit").on("click", function () {
     }
     var newComment = {
         body: commentBodyInput.val().trim(),
-        postId: postId,
-        userId: userId
+        postId: postId
+      
     }
     console.log(newComment);
     submitComment(newComment);

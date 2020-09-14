@@ -49,12 +49,13 @@ module.exports = function(app) {
 
     app.post("/api/posts/", function(req, res) {
         console.log("/api/posts call made:", req.body);
-        db.UserQuestion.create({
-            title: req.body.title,
-            question: req.body.title
+        if (req.user){db.UserQuestion.create({
+            question: req.body.question,
+            UserId: req.user.id
         }).then(function(dbPost) {
             res.json(dbPost);
         });
+    }
     });
 
     app.post("/api/answer/", function(req, res) {
@@ -65,7 +66,7 @@ module.exports = function(app) {
             where: {
                 UserId: req.params.id
             },
-            questionId: req.body.query,
+            // questionId: req.body.query,
             body: req.body.body,
             UserId: req.body.userId
         }).then(function(results) {
