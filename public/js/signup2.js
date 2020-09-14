@@ -29,18 +29,7 @@ $(document).ready(() => {
       emailInputSignup.val("");
       passwordInputSignup.val("");
     });
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
     function signUpUser(email, password) {
@@ -80,7 +69,6 @@ $(document).ready(() => {
         queryS.style.position = "absolute";
         queryS.style.left = IW - EW +'px';
         queryS.style.top = IH - EH+'px';
-    //http://stackoverflow.com/questions/6802956/how-to-position-a-div-in-a-specific-coordinates
       }
     }
     var HI = 49
