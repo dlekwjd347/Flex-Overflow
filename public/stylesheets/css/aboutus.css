@@ -40,12 +40,16 @@ body{
   }
   
   .scroll {
-   max-height: 200px;
+   max-height: 220px;
    overflow-y: auto;
 }
 
-  .card {
-     margin: 20px;
+.card {
+   margin: 10px;
+}
+
+  .card-group {
+     margin: 15px;
   }
 
   .card-title{
