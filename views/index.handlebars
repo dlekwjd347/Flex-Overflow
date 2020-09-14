@@ -18,6 +18,21 @@
             <a href="/index">Home</a>
           </li>
 
+           <ul class="nav navbar-nav hidden-xs">
+          <li class="active">
+            <a href="/q-n-a.html">Interview Question</a>
+          </li>
+
+           <ul class="nav navbar-nav hidden-xs">
+          <li class="active">
+            <a href="/aboutus.html">About Us</a>
+          </li>
+
+           <ul class="nav navbar-nav hidden-xs">
+          <li class="active">
+            <a href="/project.html">Project Board</a>
+          </li>
+
           {{#if user}}
           <li>
            <a href="/auth/logout" id="profile-link">Logout</a>
@@ -43,7 +58,7 @@
   <p>{{title}}</p>
   {{/each}}
   </div>
-  {{!-- TITLE OF QUESTION  --}}
+  {{!-- TITLE OF QUESTION    sarah's attempt  --}}
   <div class="col-md-9">
 
     <ul class="list-group media-list media-list-stream">
@@ -59,6 +74,8 @@
         </div>
       </li>
 </div>
+
+
   {{!-- ASK YOUR QUESTION SECTION  --}}
   <div class="col-md-9">
 
@@ -141,7 +158,7 @@
 <!-- Custom Script -->
 <script src="/js/mainblogpost.js" type="text/javascript"></script>
 
-<script type="text/javascript">
+{{!-- <script type="text/javascript">
 var userId;
 {{!-- $(document).ready(function() {
   $.ajax({
@@ -151,5 +168,5 @@ var userId;
     console.log(result);
     userId = result.id;
   });
-}); --}}
+}); --}} --}}
 </script> 
