@@ -3,10 +3,6 @@
 module.exports = function (sequelize, DataTypes) {
     const UserAnswer = sequelize.define("UserAnswer", {
 
-        question_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        },
         answer: {
             type: DataTypes.TEXT,
             allowNull: false
