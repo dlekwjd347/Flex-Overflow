@@ -49,10 +49,6 @@
     z-index: 1000;
   }
   
-  
-  /*all of the letters padding*/
-  
-  
   /*Letter animation and animation frames*/
   
   #a0 {
@@ -266,7 +262,7 @@
   
   /*---------------------------------------------------------*/
   
-  /*ceter all relatively, make background black and set font family respectively*/
+  /*center all relatively, make background black and set font family respectively*/
   
   body {
     position: absolute;
@@ -302,10 +298,10 @@
   .inputs.focus {
     font-size: 16px;
     height: 60px;
-    color: white;
+    color: black;
     text-align: center;
     width: 500px;
-    /* margin-left: -36px; */
+    margin-left: -140px;
     box-shadow: inset 200px 200px 200px 0 #6FFFE9;
     border: solid 10px #000000;
   }
@@ -341,7 +337,6 @@
     float: centre;
     /*float centre keeps the input feilds above the buttons, found through http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning*/
     text-align: centre;
-    posistion: absolute;
     color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
@@ -512,7 +507,7 @@
   }
   
   
-  /*animation for tittle*/
+  /*animation for title*/
   
   @keyframes moving {
     from {
@@ -595,9 +590,8 @@
     height: 50px;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 30px;
-    float: centre;
-    text-align: centre;
-    posistion: absolute;
+    float: center;
+    text-align: center;
     color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
@@ -614,9 +608,8 @@
     height: 50px;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 30px;
-    float: centre;
-    text-align: centre;
-    posistion: absolute;
+    float: center;
+    text-align: center;
     color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
@@ -631,9 +624,8 @@
     height: 50px;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 30px;
-    float: centre;
-    text-align: centre;
-    posistion: fixed;
+    float: center;
+    text-align: center;
     color: #6FFFE9;
     border: 1px solid black;
     background-color: #000000;
