@@ -13,7 +13,7 @@ const db = require("./models");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public/"));
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard c8", resave: true, saveUninitialized: true })
@@ -26,6 +26,8 @@ app.use(passport.session());
 var exphbs = require("express-handlebars");
 var Handlebars = require("handlebars");
 
+
+
 // Use Handlebars as the default view engine
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
@@ -35,6 +37,7 @@ app.set("view engine", "handlebars");
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/post-api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
