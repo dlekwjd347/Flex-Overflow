@@ -1,26 +1,57 @@
 body{
     font-size: x-large;
     background-color: #0b132b;
-    color: #6fffe9;
+    
     font-family: 'Gayathri', sans-serif;
     margin-top: 30px;
   }
-  #about{
+
+
+  .about{
      text-align: center;
+     color: #6fffe9;
+  }
+
+  h1 {
+   font-family: 'Monda', sans-serif;
+   text-shadow: 2px 2px darkblue;
+   font-style: italic;
+   color: #6FFFE9;
+   font-size: 31px;
+  }
+
+  
+  h2{
+
+     font-size: larger;
+     font-family: 'Monda', sans-serif;
+     text-shadow: 2px 2px darkblue;
+     font-style: italic;
+     color: #6FFFE9;
+     font-size: 31px;
   }
   
-  h1{
-     text-align: center;
-     
+  h3{
+   font-family: 'Monda', sans-serif;
+    text-shadow: 2px 2px darkblue;
+    font-style: italic;
+    color: #6FFFE9;
+    font-size: 27px;
   }
   
-  h2, h3{
-     text-align: center;
-     font-size: 2.5rem;
+  .scroll {
+   max-height: 220px;
+   overflow-y: auto;
+}
+
+.card {
+   margin: 10px;
+}
+
+  .card-group {
+     margin: 15px;
   }
-  
-  
-  
+
   .card-title{
      font-size: larger;
   }
@@ -28,6 +59,18 @@ body{
      font-size: large;
   }
 
-  .container{
-     display: flow-root;
+  .italicize {
+     font-style: italic;
+  }
+
+  .card-text {
+   font-family: 'Titillium Web', sans-serif;
+   font-style: italic;
+   font-weight: bold;
+   font-size: 17px;
+  }
+
+  .card-description {
+     font-size: 17px;
+     font-family: 'Titillium Web', sans-serif;
   }

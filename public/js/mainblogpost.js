@@ -40,8 +40,8 @@ $(".comment-submit").on("click", function () {
     }
     var newComment = {
         body: commentBodyInput.val().trim(),
-        postId: postId,
-        userId: userId
+        postId: postId
+      
     }
     console.log(newComment);
     submitComment(newComment);
