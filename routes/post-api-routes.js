@@ -48,9 +48,10 @@ module.exports = function(app) {
     });
 
     app.post("/api/posts/", function(req, res) {
-        console.log("/api/posts call made");
+        console.log("/api/posts call made:", req.body);
         db.UserQuestion.create({
-            question: req.body.question
+            title: req.body.title,
+            question: req.body.title
         }).then(function(dbPost) {
             res.json(dbPost);
         });
