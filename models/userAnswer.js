@@ -2,14 +2,6 @@
 
 module.exports = function (sequelize, DataTypes) {
     const UserAnswer = sequelize.define("UserAnswer", {
-<<<<<<< HEAD
-=======
-
-        question_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        },
->>>>>>> 5e968682483c99270f1089ecfc61d8094f4d1298
         answer: {
             type: DataTypes.TEXT,
             allowNull: false

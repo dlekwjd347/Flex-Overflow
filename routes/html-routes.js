@@ -136,13 +136,14 @@ module.exports = function (app) {
 			order: [
 				['createdAt', 'DESC'],
 				// [db.UserAnswer, 'createdAt', 'ASC']
-			]
+			], 
+			raw: true
 		}).then(posts => {
-			var indexObject = {
-				QuestionsArr: posts,
-				user: req.user
+			var indexObject = { //packaging an object with data (objects with array) and sending it to handlebars
+				QuestionsArr: posts, //all questions retrieved from database 
+				user: req.user //data for the user who is logged in
 			}
-			console.log('does it work', indexObject);
+			console.log(indexObject.QuestionsArr); 
 			res.render("index", indexObject);
 		});
 		// const handlebarsObject = {
