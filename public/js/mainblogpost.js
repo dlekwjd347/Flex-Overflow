@@ -16,9 +16,7 @@ $(document).ready(function () {
 
 
     var newPost = {
-        title: postBodyInput.val().trim(),
-        postType: postTypeInput,
-        userId: userId
+        question: postBodyInput.val().trim(),
     }
 
     console.log(newPost);
