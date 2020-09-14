@@ -14,19 +14,20 @@ body{
      
   }
   
-  h2{
+  h2, h3{
      text-align: center;
-     font-size: larger;
+     font-size: 2.5rem;
   }
   
-  h3{
-  text-align: center;
-  font-size: larger;
-  }
+  
   
   .card-title{
      font-size: larger;
   }
   .card-description{
      font-size: large;
+  }
+
+  .container{
+     display: flow-root;
   }

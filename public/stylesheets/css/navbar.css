@@ -1,6 +1,6 @@
 .logo {
     line-height: 60px;
-    position: initial;
+    /* position: initial; */
     float: left;
     margin: 16px 46px;
     color: #fff;
@@ -15,14 +15,16 @@
     font-style: italic;
 }
 nav {
-    top: auto;
-    position: initial;
+    top: 0;
+    position: fixed;
     width: 100%;
     line-height: 60px;
     width: 100%;
     height: 12vh;
     background: url(https://cxl.com/wp-content/uploads/2018/09/coding-language.jpg);
     font-family: 'Lexend Deca', sans-serif;
+
+
 }
 
 nav ul {
