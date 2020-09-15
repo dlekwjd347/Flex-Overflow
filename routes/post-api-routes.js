@@ -58,23 +58,17 @@ module.exports = function(app) {
     }
     });
 
-    app.post("/api/answer/", function(req, res) {
-        console.log("/api/answer call made");
-        var query = connection.query("Select id FROM fof_db.UserQuestion;", function(err, results) {
-            if (err) throw err;
-        db.UserAnswer.create({
-            where: {
-                UserId: req.params.id
-            },
-            // questionId: req.body.query,
-            body: req.body.body,
-            UserId: req.body.userId
-        }).then(function(results) {
-            console.log("Answer added!")
-            res.json(results);
-        });
-    })
-});
+//     app.post("/api/answer/", function(req, res) {
+//         db.UserAnswer.create({
+//            UserQuestionId: req.body.query,
+//             body: req.body.body,
+//             UserId: req.body.userId
+//         }).then(function(results) {
+//             console.log("Answer added!")
+//             res.json(results);
+//         });
+//     })
+// });
 
 app.post("/api/answer/", function(req, res) {
     db.UserAnswer.create(req.body).then(function(dbAnswer) {
