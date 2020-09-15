@@ -49,8 +49,6 @@ $(document).ready(() => {
   }
 });
 
-
-
 // ---- LOGIN HANDLER -------->>//
 $("#login-button").on("click", event => {
 
