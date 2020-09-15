@@ -18,8 +18,13 @@ body{
    font-style: italic;
    color: #6FFFE9;
    font-size: 31px;
+   margin: 20px;
   }
 
+  li {
+   padding-left: 507px;
+   text-align: left;
+  }
   
   h2{
 
@@ -37,6 +42,8 @@ body{
     font-style: italic;
     color: #6FFFE9;
     font-size: 27px;
+    text-align: center;
+    margin-top: 60px;
   }
   
   .scroll {
