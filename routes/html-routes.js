@@ -28,7 +28,7 @@ module.exports = function (app) {
 		console.log("Before the get attempt");
 		db.UserQuestion.findAll({
 			include: [
-				db.User, 
+				db.User,
 				db.UserAnswer,
 				{
 					model: db.UserAnswer,
@@ -136,42 +136,44 @@ module.exports = function (app) {
 			order: [
 				['createdAt', 'DESC'],
 				// [db.UserAnswer, 'createdAt', 'ASC']
-			], 
-			raw: true
-		}).then(posts => {
+			],
+			// raw: true
+		}).then(questions => questions.map(question =>
+			question.get({ plain: true })))
+		.then(posts => {
 			var indexObject = { //packaging an object with data (objects with array) and sending it to handlebars
 				QuestionsArr: posts, //all questions retrieved from database 
 				user: req.user //data for the user who is logged in
 			}
-			console.log(indexObject.QuestionsArr); 
+			console.log(indexObject.QuestionsArr);
 			res.render("index", indexObject);
 		});
-		// const handlebarsObject = {
-		// 	userName: "Charlie",
-		// };
-		// console.log("in route get / ");
-		// db.UserQuestion.findAll({
-		// }).then(function (dbPost) {
-		// 	//res.json(dbPost);
-		// 	 console.log(dbPost)
-		// 	var qArray= []
-		// 	for (var i=0; i< dbPost.length;i++){
-		// 		qArray.push({
-		// 		id: dbPost[i].id,
-		// 		title:  dbPost[i].title,
-		// 		question:  dbPost[i].question,
-		// 		createdAt:  dbPost[i].createdAt,
-		// 		updatedAt:  dbPost[i].updatedAt
-		// 		})
-		// 	}
-		// 	const handlebarsObject = {
-		// 		questions: qArray
-		// 	};
-		// 	console.log(handlebarsObject)
-		// 	// get the info from the db and pass the question in the object
-		// 	res.render("index", handlebarsObject);
-		// })
-	})
+	// const handlebarsObject = {
+	// 	userName: "Charlie",
+	// };
+	// console.log("in route get / ");
+	// db.UserQuestion.findAll({
+	// }).then(function (dbPost) {
+	// 	//res.json(dbPost);
+	// 	 console.log(dbPost)
+	// 	var qArray= []
+	// 	for (var i=0; i< dbPost.length;i++){
+	// 		qArray.push({
+	// 		id: dbPost[i].id,
+	// 		title:  dbPost[i].title,
+	// 		question:  dbPost[i].question,
+	// 		createdAt:  dbPost[i].createdAt,
+	// 		updatedAt:  dbPost[i].updatedAt
+	// 		})
+	// 	}
+	// 	const handlebarsObject = {
+	// 		questions: qArray
+	// 	};
+	// 	console.log(handlebarsObject)
+	// 	// get the info from the db and pass the question in the object
+	// 	res.render("index", handlebarsObject);
+	// })
+})
 }
 
 

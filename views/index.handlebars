@@ -35,7 +35,7 @@
 
               {{#if user}}
               <li>
-                <a href="/auth/logout" id="profile-link">Logout</a>
+                <a href="/api/logout" id="profile-link">Logout</a>
               </li>
               {{/if}}
 
@@ -74,10 +74,10 @@
 <div>
   {{#each QuestionsArr}}
       <h3>{{this.question}}</h3>
-      {{#each QuestionsArr}} {{!-- nested each: the answer array is going to be looped while the question array is looped --}}
-      <h4>{{this.answer}}</h4>
-      {{/each}}
-      <ul class="list-group media-list media-list-stream">
+       <ul class="list-group media-list media-list-stream">
+      {{#each UserAnswers}} {{!-- nested each: the answer array is going to be looped while the question array is looped --}}
+      <li>{{this.answer}}</li>
+      {{/each}}    
     <li class="media list-group-item p-a-2">
       <div class="input-group">
         <input type="text" class="form-control comment-body" id="post-{{id}}" data-postid="{{id}}" placeholder="Answer">

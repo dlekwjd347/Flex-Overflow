@@ -7,4 +7,4 @@ node_modules
 
 models/userquestion.js
 models/useranswer.js
-
+public/js/signup2.js
