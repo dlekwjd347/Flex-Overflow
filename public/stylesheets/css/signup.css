@@ -591,9 +591,11 @@
   
   /*(2nd page) sign up page colour and format for title text*/
   
-  .welcomeS {
+  .signuptitle {
     position: static;
-    font-size: 20px;
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-family: 'Ruda', sans-serif;
     color: #6FFFE9;
     margin-top: 0vh;
     margin-left: -125px;
