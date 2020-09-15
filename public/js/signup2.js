@@ -21,55 +21,8 @@ $(document).ready(() => {
 
     console.log("userData", userData)
 
-      if (!userData.email || !userData.password) {
-        return;
-      }
-      // If we have an email and password, run the signUpUser function
-      signUpUser(userData.email, userData.password);
-      emailInputSignup.val("");
-      passwordInputSignup.val("");
-    });
-        
-    // Does a post to the signup route. If successful, we are redirected to the members page
-    // Otherwise we log any errors
-    function signUpUser(email, password) {
-        $.post("/api/signup", {
-          email: email,
-          password: password
-        })
-          .then(() => {
-            window.location.replace("/mainblog");
-            // If there's an error, handle it by throwing up a bootstrap alert
-          })
-          .catch(handleLoginErr);
-      }
-    
-      function handleLoginErr(err) {
-        $("#alert .msg").text(err.responseJSON);
-        $("#alert").fadeIn(500);
-      }
-    });
-    
-  // =========== for sign up form button styling ==============
-  //loader
-  function MBC(element, heightIndentation, widthIndentation) {
-      var ele = element;
-      console.log(ele);
-      var IW = widthIndentation;
-      var IH = heightIndentation;
-      if (IH === undefined || IH === null){IH = 0};
-      if (IW === undefined || IW === null){IW = 0};
-      var EW = $(ele).width() / 2;
-      var EH = $(ele).height() / 2;
-      if (IW == 0 && IH == 0){
-        document.querySelector(ele).style.top = Math.round((screen.height / 2) - EH) + 'px';
-        document.querySelector(ele).style.left = Math.round((screen.width / 2) - EW) + 'px';
-      }else{
-        var queryS = document.querySelector(ele);
-        queryS.style.position = "absolute";
-        queryS.style.left = IW - EW +'px';
-        queryS.style.top = IH - EH+'px';
-      }
+    if (!userData.email || !userData.password) {
+      return;
     }
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password);
