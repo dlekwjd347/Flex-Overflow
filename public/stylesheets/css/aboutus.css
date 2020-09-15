@@ -1,42 +1,56 @@
 body{
-    font-size: x-large;
+    font-size: 15px;
     background-color: #0b132b;
     
-    font-family: 'Gayathri', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     margin-top: 30px;
   }
 
 
   .about{
+     margin: 20px;
      text-align: center;
-     color: #6fffe9;
+     color: black;
+     background-color: #C6E2E9;
+     border-style: solid;
+     border-color: white;
+     border-width: .75px;
+     padding: 10px;
+
   }
 
   h1 {
-   font-family: 'Monda', sans-serif;
-   text-shadow: 2px 2px darkblue;
+   font-family: 'Lexend Deca', sans-serif;
+   
    font-style: italic;
-   color: #6FFFE9;
+   color: #0B132B;
    font-size: 31px;
+   margin: 20px;
   }
 
+  li {
+   padding-left: 490px;
+   text-align: left;
+  }
   
   h2{
 
      font-size: larger;
-     font-family: 'Monda', sans-serif;
-     text-shadow: 2px 2px darkblue;
+     font-family: 'Lexend Deca', sans-serif;
+     
      font-style: italic;
-     color: #6FFFE9;
+     color: #0B132B;
      font-size: 31px;
   }
   
   h3{
-   font-family: 'Monda', sans-serif;
-    text-shadow: 2px 2px darkblue;
+   font-family: 'Lexend Deca', sans-serif;
+    
     font-style: italic;
-    color: #6FFFE9;
+    color: #0B132B;
     font-size: 27px;
+    text-align: center;
+    margin-top: 60px;
   }
   
   .scroll {
