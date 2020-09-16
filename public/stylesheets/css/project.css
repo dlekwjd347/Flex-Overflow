@@ -27,16 +27,16 @@ p {
 
 .p-body {
     margin-top: 50px;
-    margin-right: 250px;
-    margin-left: 250px;
+    margin-right: 100px;
+    margin-left: 100px;
     border-style: solid;
     border-color: white;
     border-width: .75px;
 }
 
 .linecont {
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 
