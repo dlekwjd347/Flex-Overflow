@@ -1,15 +1,17 @@
-body, h1 {
-    font-family: 'Lexend Deca', sans-serif;
-    color: #6fffe9;
-    background-color: #0B132B;
+body {
+    font-family:'Poppins', sans-serif;
+    color: white;
+    background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
     text-align: center;
 }
 
+.modaltext {
+    color: black;
+}
+
 h1 {
-    font-family: 'Monda', sans-serif;
-    text-shadow: 2px 2px darkblue;
-    font-style: italic;
-    color: #6FFFE9;
+    font-family: 'Poppins', sans-serif;
+    color: white;
     font-size: 30px;
 }
 
@@ -18,12 +20,9 @@ body {
 }
 
 p {
-    color: #3A506B
+    color: white
 }
 
-.pback {
-    background-color: #1c2541;
-}
 
 .p-body {
     margin-top: 50px;
@@ -45,9 +44,8 @@ p {
     margin-bottom: 17px;
     margin-top: 40px;
     text-decoration: underline;
-    color: #5BC3EB;
+    color: white;
     letter-spacing: 3px;
-    text-shadow: 1px 1px #BFD7FF;
 }
 
 .card-text {

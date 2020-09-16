@@ -1,6 +1,6 @@
 body {
     font-family: 'Lexend Deca', sans-serif;
-    background-color: #1C2541;
+    background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
 }
 .content {
     margin-left: 50px;
@@ -13,26 +13,24 @@ body {
     margin-bottom: 40px;
     margin-top: 40px;
     text-decoration: underline;
-    color: #5BC3EB;
+    color: white;
     letter-spacing: 3px;
-    text-shadow: 1px 1px #BFD7FF;
 }
 
 .prompt{
-    font-family: 'Monda', sans-serif;
-    text-shadow: 2px 2px darkblue;
-    font-style: italic;
-    color: #6FFFE9;
+    font-family: 'Poppins', sans-serif;
+ 
+    color: white;
     font-size: 27px;
 }
 #answer, #example {
-    color: #E9FAE3;
+    color: white;
     font-size: 18px;
     text-align: left;
     
 }
 #question {
-    color: #E9FAE3;
+    color: white;
     font-size: 21px;
     font-weight: bold;
      
@@ -40,7 +38,8 @@ body {
 
 h1{
     font-size: larger;
-  color: #5BC0BE
+  color:white;
+  font-family: 'Poppins', sans-serif
 }
 
 #new-question {
@@ -85,60 +84,9 @@ h1{
     position: initial;
     float: left;
     margin: 16px 46px;
-    color: #fff;
+    color: white;
     font-weight: bold;
     font-size: 40px;
     letter-spacing: 2px;
     font-family: 'Lexend Deca', sans-serif;
 }
-
-nav {
-    position: initial;
-    width: 100%;
-    line-height: 60px;
-    width: 100%;
-    height: 12vh;
-    background: url(https://cxl.com/wp-content/uploads/2018/09/coding-language.jpg);
-    font-family: 'Lexend Deca', sans-serif;
-}
-
-nav ul {
-    line-height: 70px;
-    list-style: none;
-    background: rgba(0, 0, 0, 0);
-    overflow: hidden;
-    color: #fff;
-    padding: 0;
-    text-align: right;
-    margin: 0;
-    padding-right: 20px;
-    transition: 1s;
-}
-
-/* nav.black ul {
-    background: #000;
-} */
-
-nav ul li {
-    display: inline-block;
-    padding: 16px 40px;;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-}
-
-.menu-icon {
-    line-height: 60px;
-    width: 100%;
-    background: #000;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 15px 24px;
-    cursor: pointer;
-    color: #fff;
-    display: none;
-}
-
