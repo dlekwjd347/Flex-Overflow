@@ -1,11 +1,9 @@
 html{
-    background-color: #0B132B;
+    background-color: #000000;
 }
-
 .site-wrapper {
-    background-color: #0B132B;
+    background-color: #000000;
 }
-
 /* Intro Message */
 #banner{
     display: flex;

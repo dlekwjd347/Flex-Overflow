@@ -1,90 +1,88 @@
 body{
-    font-size: 15px;
-    background-color: #0b132b;
-    
-    font-family: 'Lexend Deca', sans-serif;
-    margin-top: 30px;
-  }
-
-
-  .about{
-     margin: 20px;
-     text-align: center;
-     color: black;
-     background-color: #C6E2E9;
-     border-style: solid;
-     border-color: white;
-     border-width: .75px;
-     padding: 10px;
-
-  }
-
-  h1 {
-   font-family: 'Lexend Deca', sans-serif;
+   font-size: 15px;
+   background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
    
-   font-style: italic;
-   color: #0B132B;
-   font-size: 31px;
-   margin: 20px;
-  }
-
-  li {
-   padding-left: 490px;
-   text-align: left;
-  }
-  
-  h2{
-
-     font-size: larger;
-     font-family: 'Lexend Deca', sans-serif;
-     
-     font-style: italic;
-     color: #0B132B;
-     font-size: 31px;
-  }
-  
-  h3{
    font-family: 'Lexend Deca', sans-serif;
-    
-    font-style: italic;
-    color: #0B132B;
-    font-size: 27px;
+   margin-top: 30px;
+ }
+
+
+ .about{
+    margin: 20px;
     text-align: center;
-    margin-top: 60px;
-  }
-  
-  .scroll {
-   max-height: 220px;
-   overflow-y: auto;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: .75px;
+    padding: 10px;
+
+ }
+
+ h1 {
+  font-family: 'Poppins', sans-serif;
+  color:white;
+  font-size: 31px;
+  margin: 20px;
+ }
+
+ li {
+  padding-left: 490px;
+  text-align: left;
+ }
+ 
+ h2{
+
+    font-size: larger;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 31px;
+ }
+ 
+ h3{
+  font-family: 'Poppins', sans-serif;
+   color: white;
+   font-size: 27px;
+   text-align: center;
+   margin-top: 60px;
+ }
+ 
+ .scroll {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.team {
+  color: black;
 }
 
 .card {
-   margin: 10px;
+  margin: 10px;
 }
 
-  .card-group {
-     margin: 15px;
-  }
+ .card-group {
+    margin: 15px;
+ }
 
-  .card-title{
-     font-size: larger;
-  }
-  .card-description{
-     font-size: large;
-  }
+ .card-title{
+    font-size: larger;
+ }
+ .card-description{
+    font-size: large;
+ }
 
-  .italicize {
-     font-style: italic;
-  }
+ .italicize {
+    font-style: italic;
+ }
 
-  .card-text {
-   font-family: 'Titillium Web', sans-serif;
-   font-style: italic;
-   font-weight: bold;
-   font-size: 17px;
-  }
+ .card-text {
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 17px;
+  color: black;
+ }
 
-  .card-description {
-     font-size: 17px;
-     font-family: 'Titillium Web', sans-serif;
-  }
+ .card-description {
+    font-size: 17px;
+    font-family: 'Titillium Web', sans-serif;
+ }
