@@ -1,0 +1,12 @@
+body {
+    color: white;
+    background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
+    /* text-align: center; */
+}
+.site-width-limit {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}

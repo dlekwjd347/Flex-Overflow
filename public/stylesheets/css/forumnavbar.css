@@ -1,14 +1,14 @@
-.site-width-limit {
+/* .site-width-limit {
     max-width: 950px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 50px;
     padding-right: 50px;
-}
+} */
 
 .logo {
     line-height: 60px;    
-    color: white;
+    color:white;
     display: flex;
     font-weight: bold;
     font-size: 40px;
@@ -26,7 +26,7 @@
     flex-direction: row;
     text-align: right;
     /* justify-content: right */
-    margin-left: 900px;
+    margin-left: 450px;
 }
 
 .menu-item {
