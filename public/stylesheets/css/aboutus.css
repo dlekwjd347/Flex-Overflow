@@ -1,5 +1,5 @@
 body{
-   font-size: 15px;
+   /* font-size: px; */
    background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
    
    font-family: 'Lexend Deca', sans-serif;
@@ -12,12 +12,11 @@ body{
     text-align: center;
     color: white;
     padding: 10px;
-
  }
 
  h1 {
   font-family: 'Poppins', sans-serif;
-  color:white;
+  color: yellow;
   font-size: 31px;
   margin: 20px;
  }
@@ -31,13 +30,13 @@ body{
 
     font-size: larger;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: yellow;
     font-size: 31px;
  }
  
  h3{
   font-family: 'Poppins', sans-serif;
-   color: white;
+   color: yellow;
    font-size: 27px;
    text-align: center;
    margin-top: 60px;
@@ -88,3 +87,6 @@ body{
     font-size: 17px;
     font-family: 'Titillium Web', sans-serif;
  }
+
+
+ 

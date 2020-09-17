@@ -1,63 +1,65 @@
-    <header>
-        <nav class="main-nav">
+<header>
+  <nav class="main-nav">
 
-  <div class="logo">
-    Flex <span class="navtitle">Overflow</span>
-  </div>
-  <div class="menu">
-    <ul class="menu-list">
-      <li class="menu-item"><a href="q-n-a.html">Interview Questions</a></li>
-      <li class="menu-item"><a href="/mainblog">Forum</a></li>
-      <li class="menu-item"><a href="aboutus.html">About</a></li>
-      <li class="menu-item"><a href="project.html">Project</a></li>
-      {{#if user}}
-      <li class="menu-item">
-        <a href="/api/logout" id="profile-link">Logout</a>
-      </li>
-      {{/if}}
-    </ul>
-  </div>
-</nav>
-    </header>
+    <div class="logo">
+      Flex <span class="navtitle">Overflow</span>
+    </div>
+    <div class="menu">
+      <ul class="menu-list">
+        <li class="menu-item"><a href="q-n-a.html">Interview Questions</a></li>
+        <li class="menu-item"><a href="/mainblog">Forum</a></li>
+        <li class="menu-item"><a href="aboutus.html">About</a></li>
+        <li class="menu-item"><a href="project.html">Project</a></li>
+        {{#if user}}
+        <li class="menu-item">
+          <a href="/api/logout" id="profile-link">Logout</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
+</header>
+<div id="gutter"></div>
 <div class="site-width-limit">
-<div class="col-md-12">
+  {{!-- <div class="col-md-12"> --}}
 
-  <ul class="list-group media-list media-list-stream">
+    <ul class="list-group media-list media-list-stream">
 
-    <li class="media list-group-item question p-a">
-      <div class="input-group">
-        <input type="text" class="form-control post-body-class" id="post-body" placeholder="Ask Your Question">
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default post-button" id="post-submit">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </button>
+      <li class="media list-group-item question p-a">
+        <div class="input-group">
+          <input type="text" class="form-control post-body-class" id="post-body" placeholder="Ask Your Question">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default post-button" id="post-submit">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
-      </div>
-    </li>
-</div>
-
-
-<div>
-  {{#each QuestionsArr}}
-  <h3>{{this.question}}</h3>
-  <ul class="list-group media-list media-list-stream">
-    {{#each UserAnswers}}
-    {{!-- nested each: the answer array is going to be looped while the question array is looped --}}
-    <li>{{this.answer}}</li>
-    {{/each}}
-    <li class="media list-group-item p-a-2">
-      <div class="input-group">
-        <input type="text" class="form-control comment-body" id="post-{{id}}" data-postid="{{id}}" placeholder="Answer">
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default comment-submit" id="{{id}}">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-    </li>
+      </li>
   </ul>
-  {{/each}}
-</div>
+
+
+  <div>
+    {{#each QuestionsArr}}
+    <h3>{{this.question}}</h3>
+    <ul class="list-group media-list media-list-stream">
+      {{#each UserAnswers}}
+      {{!-- nested each: the answer array is going to be looped while the question array is looped --}}
+      <li>{{this.answer}}</li>
+      {{/each}}
+      <li class="media list-group-item p-a-2">
+        <div class="input-group">
+          <input type="text" class="form-control comment-body" id="post-{{id}}" data-postid="{{id}}"
+            placeholder="Answer">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default comment-submit" id="{{id}}">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    {{/each}}
+  </div>
 </div>
 
 

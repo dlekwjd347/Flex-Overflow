@@ -8,7 +8,7 @@
 
 .logo {
     line-height: 60px;    
-    color: white;
+    color: #6FFFE9;
     display: flex;
     font-weight: bold;
     font-size: 40px;
@@ -24,9 +24,9 @@
 .menu-list {
     display: flex;
     flex-direction: row;
-    text-align: right;
+    justify-content: flex-end;
     /* justify-content: right */
-    margin-left: 900px;
+    
 }
 
 .menu-item {
@@ -35,10 +35,10 @@
 
 .main-nav {
     display: flex;
-    width: 100%;
     line-height: 60px;
     border-bottom: slategray;
     font-family: 'Poppins', sans-serif;
+    margin: 0px 20px;
 }
 
 nav ul {
