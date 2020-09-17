@@ -6,7 +6,6 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false,
         }
-
     });
 
     UserQuestion.associate = function(models){
@@ -15,7 +14,6 @@ module.exports = function (sequelize, DataTypes) {
         });
     UserQuestion.belongsTo(models.User)
     };
-
-
+    
     return UserQuestion;
 };
