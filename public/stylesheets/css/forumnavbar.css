@@ -8,7 +8,7 @@
 
 .logo {
     line-height: 60px;    
-    color: #6FFFE9;
+    color: #ffea00;
     display: flex;
     font-weight: bold;
     font-size: 40px;
@@ -37,8 +37,8 @@
     display: flex;
     width: 100%;
     line-height: 60px;
-    border-bottom: slategray;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    margin: 0px 50px;
 }
 
 nav ul {

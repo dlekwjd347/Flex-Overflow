@@ -11,11 +11,13 @@ html{
     text-align: center;
     align-items: center;
     padding-top: 240px;
-    /* height: 100vh; */
-    /* background: #050801; */
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: bold;
-    color: #6FFFE9;
+    color: #ffea00;
+}
+
+.mission{
+    font-size: 25px;
 }
 
 
@@ -24,8 +26,8 @@ html{
     justify-content: center;
     text-align: center;
     align-items: center;
-    font-family: 'Lexend Deca', sans-serif;
-    padding: 25px 10px;
+    font-family: 'Dosis', sans-serif;
+    padding: 40px 10px;
     margin: 40px 0;
     color: #ffea00;
     text-decoration: none;
@@ -125,9 +127,6 @@ html{
     }
 
 }
-
-
-
 
 @media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
     body {

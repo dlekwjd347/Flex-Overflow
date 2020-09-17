@@ -1,7 +1,10 @@
 body {
-    font-family:'Poppins', sans-serif;
+    /* background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000); */
+    background-image: url(../../images/allbg.jpeg);
+    background-size: cover;
+    font-family: 'Dosis', sans-serif;
+    font-size: 17px;
     color: white;
-    background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
     text-align: center;
 }
 
@@ -10,7 +13,7 @@ body {
 }
 
 h1 {
-    font-family: 'Poppins', sans-serif;
+   font-family: 'Dosis', sans-serif;
     color: yellow;
     font-size: 30px;
 }
@@ -23,7 +26,6 @@ p {
     color: white
 }
 
-
 .p-body {
     margin-top: 50px;
     margin-right: 100px;
@@ -31,6 +33,7 @@ p {
     border-style: solid;
     border-color: white;
     border-width: .75px;
+    /* max-width: 70ch; */
 }
 
 .linecont {
