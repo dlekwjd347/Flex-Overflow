@@ -313,7 +313,7 @@
   }
   
   
-  /*colour login, possition and apply font to button*/
+  /*color login, position and apply font to button*/
   
   .login {
     position: static;
@@ -332,7 +332,7 @@
   }
   
   
-  /*colour sign-up, possition and apply font to button*/
+  /*color sign-up, position and apply font to button*/
   
   .sign_up {
     position: static;
@@ -352,7 +352,7 @@
   }
   
   
-  /*style placeholder text in input forms, https://davidwalsh.name/html5-placeholder-css*/
+  /*style placeholder text in input forms*/
   
   ::-webkit-input-placeholder {
     color: #6FFFE9;
@@ -378,77 +378,6 @@
   /*----------------TABLE SETUP START-------------------*/
   
   
-  /*colour table, force animation to stay paused untill started as it prevents bugs.*/
-  
-  .table {
-    position: fixed;
-    pointer-events: none;
-    /*forces mouse clicks to go through table, "http://stackoverflow.com/questions/3538489/html-css-make-a-div-invisible-to-clicks"*/
-    z-index: -1000;
-    margin-top: -30vh;
-    color: #6FFFE9;
-    margin-left: -44vw;
-    border-collapse: collapse;
-    border: 1px solid #6FFFE9;
-    opacity: 0;
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-  }
-  
-  
-  /*when on non IE browser, animate table to appear after title has moved*/
-  
-  .table.active {
-    -webkit-animation: fadeIn ease-in;
-    -moz-animation: fadeIn ease-in;
-    animation: fadeIn;
-    -webkit-animation-fill-mode: forwards;
-    /* forces after animation to remain at the last keyframe*/
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-delay: 1.3s;
-    animation-delay: 1.3s;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-  }
-  
-  .table.inactive {
-    -webkit-animation: fadeOut ease-out;
-    -moz-animation: fadeOut ease-out;
-    animation: fadeOut;
-    /*-webkit-animation-fill-mode: forwards;
-    /* forces after animation to remain at the last keyframe*/
-    /*-moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;*/
-    -webkit-animation-delay: 1.3s;
-    animation-delay: 1.3s;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-  }
-  
-  /*for all tables in body (tbody) for all rows (tr) for all colums (td) 'remove' the right border*/
-  
-  .table tbody tr td:nth-child(1) {
-    border-right: 1px solid black;
-  }
-  
-  
-  /*animation for table fade in; fade from op:0 to op:1*/
-  
-  @-webkit-keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  
   /*opra,chroma, e.c.t.*/
   
   @-moz-keyframes fadeIn {
@@ -461,40 +390,11 @@
   }
   
   
-  /*mozlilla*/
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /*forces right text to be on the/aligned to the right*/
-  
-  .tableright {
-    text-align: right;
-  }
   
   
-  /*seperate style sheer for IE, as it requires a table to have opacity at >0 before it can use fadeout and fadein*/
-  
-  .table.IE {
-    pointer-events: none;
-    /*forces mouse clicks to go through table, "http://stackoverflow.com/questions/3538489/html-css-make-a-div-invisible-to-clicks"*/
-    z-index: -1000;
-    margin-top: -30vh;
-    color: #6FFFE9;
-    margin-left: -44vw;
-    border-collapse: collapse;
-    border: 1px solid #6FFFE9;
-    opacity: 1;
-  }
   
   
-  /*-----------------TABLE SETUP END------------------*/
+  /*-----------------WELCOME TITLE------------------*/
   
   
   /*colour and animation information for tittle*/
@@ -589,7 +489,7 @@
   
   .run.empty{} /*IE render bugfix*/
   
-  /*(2nd page) sign up page colour and format for title text*/
+  /*(2nd page) sign up page color and format for title text*/
   
   .signuptitle {
     position: static;
@@ -602,7 +502,7 @@
   }
   
   
-  /*(2nd page) sign up page colour and format for everything else except the back button*/
+  /*(2nd page) sign up page color and format for everything else except the back button*/
   
   .sign_upS {
     position: static;
@@ -620,7 +520,7 @@
   }
   
   
-  /*(2nd page) sign up page colour and format for the back button*/
+  /*(2nd page) sign up page color and format for the back button*/
   
   .Back {
     position: static;
@@ -636,20 +536,4 @@
     background-color: #000000;
     margin-left: 8px;
   }
-  
-  .TableBack {
-    position: static;
-    /*opacity: 0;*/
-    outline: none;
-    /*margin-top: -100000px;*/
-    height: 50px;
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 30px;
-    float: center;
-    text-align: center;
-    color: #6FFFE9;
-    border: 1px solid black;
-    background-color: #000000;
-    margin-left: 60px;
-    margin-top: 160px;
-  }
+ 

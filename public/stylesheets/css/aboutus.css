@@ -11,9 +11,6 @@ body{
     margin: 20px;
     text-align: center;
     color: white;
-    border-style: solid;
-    border-color: white;
-    border-width: .75px;
     padding: 10px;
 
  }
@@ -49,6 +46,11 @@ body{
  .scroll {
   max-height: 220px;
   overflow-y: auto;
+}
+
+.technologies {
+   font-family: 'Lexend Deca', sans-serif;   
+   font-size: 20px;
 }
 
 .team {
