@@ -6,55 +6,55 @@ body{
    font-family: 'Lato', sans-serif;
    font-size: 20px;
    margin-top: 30px;
- }
+}
 
- .about{
-    margin: auto;
-    text-align: center;
-    color: white;
-    padding: 10px;
+.about{
+   margin: auto;
+   text-align: center;
+   color: white;
+   padding: 10px;
    /* background: rgba(000,000,000,0.5); */
-    max-width: 70ch;
-   
-   
- }
+   max-width: 70ch;
 
- h1 {
-  font-family: 'Dosis', sans-serif;
-  color: yellow;
-  font-size: 31px;
-  margin: 20px;
- }
 
- li {
-  padding-left: 490px;
-  text-align: left;
- }
- 
- h2{
+}
 
-    font-size: larger;
-    font-family: 'Dosis', sans-serif;
-    color: yellow;
-    font-size: 31px;
- }
- 
- h3{
-   font-family: 'Dosis', sans-serif;
+h1 {
+   font-family: 'Exo', sans-serif;
+   color: yellow;
+   font-size: 31px;
+   margin: 20px;
+}
+
+li {
+   padding-left: 490px;
+   text-align: left;
+}
+
+h2{
+
+   font-size: larger;
+   font-family: 'Exo', sans-serif;
+   color: yellow;
+   font-size: 31px;
+}
+
+h3{
+   font-family: 'Exo', sans-serif;
    color: yellow;
    font-size: 27px;
    text-align: center;
    margin-top: 60px;
- }
- 
- .scroll {
-  max-height: 220px;
-  overflow-y: auto;
+}
+
+.scroll {
+   max-height: 220px;
+   overflow-y: auto;
 }
 
 .technologies {
-   font-family: 'Dosis', sans-serif;
-   font-size: 20px;
+   font-family: 'Exo', sans-serif;
+      font-size: 20px;
 }
 
 .team {
