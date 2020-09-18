@@ -319,7 +319,7 @@
     position: static;
     outline: none;
     height: 60px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo', sans-serif;
     font-size: 30px;
     float: centre;
     text-align: centre;
@@ -339,8 +339,8 @@
     outline: none;
     margin-top: -10px;
     height: 50px;
-    font-family: 'Dosis', sans-serif;
-    font-size: 30px;
+    font-family: 'Exo', sans-serif;
+    font-size: 30px; 
     float: centre;
     text-align: centre;
     color: #ffea00;
@@ -355,22 +355,22 @@
   
   ::-webkit-input-placeholder {
     color: #ffea00;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo', sans-serif;
   }
   
   ::-moz-placeholder {
     color: #ffea00;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo', sans-serif;
   }
   
   :-ms-input-placeholder {
     color: #ffea00;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo', sans-serif;
   }
   
   input:-moz-placeholder {
     color: #ffea00;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo', sans-serif;
   }
   
   
@@ -500,7 +500,7 @@
     outline: none;
     margin-top: 10px;
     height: 50px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo', sans-serif;
     font-size: 30px;
     float: center;
     text-align: center;
@@ -517,7 +517,7 @@
     outline: none;
     margin-top: 0px;
     height: 50px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo', sans-serif;
     font-size: 30px;
     float: center;
     text-align: center;
