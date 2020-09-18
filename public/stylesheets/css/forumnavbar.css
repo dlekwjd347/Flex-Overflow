@@ -37,7 +37,7 @@
     display: flex;
     width: 100%;
     line-height: 60px;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo', sans-serif;
     margin: 0px 50px;
 }
 
@@ -59,3 +59,8 @@ nav ul li a {
 .menu {
     width: 100%;
 }
+
+
+a:hover{
+    color: #fff700;
+    }
