@@ -1,119 +1,65 @@
-{{!-- <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">
-        <img src="/assets/images/bettercode.jpg" alt="brand" id="logo-img">
-      </a>
-    </div>
-    <div class="navbar-collapse collapse" id="navbar-collapse-main">
+<header>
+  <nav class="main-nav">
 
-      <ul class="nav navbar-nav hidden-xs">
-        <li class="active">
-          <a href="/index">Home</a>
-        </li>
-
-        <ul class="nav navbar-nav hidden-xs">
-          <li class="active">
-            <a href="/q-n-a.html">Interview Question</a>
-          </li>
-
-          <ul class="nav navbar-nav hidden-xs">
-            <li class="active">
-              <a href="/aboutus.html">About Us</a>
-            </li>
-
-            <ul class="nav navbar-nav hidden-xs">
-              <li class="active">
-                <a href="/project.html">Project Board</a>
-              </li>
-
-              {{#if user}}
-              <li>
-                <a href="/api/logout" id="profile-link">Logout</a>
-              </li>
-              {{/if}}
-
-            </ul>
-
-            {{!-- <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
-              <li>
-                <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
-                  <img class="panel-comment-profile-img" id="my-profile-img" src="{{user.profileImgUrl}}">
-                </button> 
-              </li>
-            </ul>
-    </div>
-  </div>--}}
-</nav> 
-  <nav>
-    <div class="menu-icon">
-      <i class="fa fa-bars fa-2x"></i>
-    </div>
     <div class="logo">
       Flex <span class="navtitle">Overflow</span>
     </div>
     <div class="menu">
-      <ul>
-        <li><a href="q-n-a.html">Interview Questions</a></li>
-        <li><a href="/mainblog">Forum</a></li>
-        <li><a href="aboutus.html">About</a></li>
-        <li><a href="project.html">Project</a></li>
- {{#if user}}
-              <li>
-                <a href="/api/logout" id="profile-link">Logout</a>
-              </li>
-              {{/if}}
+      <ul class="menu-list">
+        <li class="menu-item"><a href="q-n-a.html">Interview Questions</a></li>
+        <li class="menu-item"><a href="/mainblog">Forum</a></li>
+        <li class="menu-item"><a href="aboutus.html">About</a></li>
+        <li class="menu-item"><a href="project.html">Project</a></li>
+        {{#if user}}
+        <li class="menu-item">
+          <a href="/api/logout" id="profile-link">Logout</a>
+        </li>
+        {{/if}}
       </ul>
     </div>
   </nav>
+</header>
+<div id="gutter"></div>
+<div class="site-width-limit">
+  {{!-- <div class="col-md-12"> --}}
 
+    <ul class="list-group media-list media-list-stream">
 
-{{!-- TITLE OF QUESTION    sarah's attempt  --}}
-<div class="col-md-9">
-
-  <ul class="list-group media-list media-list-stream">
-
-    <li class="media list-group-item question p-a">
-      <div class="input-group">
-        <input type="text" class="form-control post-body-class" id="post-body" placeholder="Ask Your Question">
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default post-button" id="post-submit">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </button>
+      <li class="media list-group-item question p-a">
+        <div class="input-group">
+          <input type="text" class="form-control post-body-class" id="post-body" placeholder="Ask Your Question">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default post-button" id="post-submit">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
-      </div>
-    </li>
-</div>
-
-
-<div>
-  {{#each QuestionsArr}}
-      <h3>{{this.question}}</h3>
-       <ul class="list-group media-list media-list-stream">
-      {{#each UserAnswers}} {{!-- nested each: the answer array is going to be looped while the question array is looped --}}
-      <li>{{this.answer}}</li>
-      {{/each}}    
-    <li class="media list-group-item p-a-2">
-      <div class="input-group">
-        <input type="text" class="form-control comment-body" id="post-{{id}}" data-postid="{{id}}" placeholder="Answer">
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default comment-submit" id="{{id}}">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-    </li>
+      </li>
   </ul>
-  {{/each}}
+
+  <div>
+    {{#each QuestionsArr}}
+    <h3>{{this.question}}</h3>
+    <ul class="list-group media-list media-list-stream">
+      {{#each UserAnswers}}
+      {{!-- nested each: the answer array is going to be looped while the question array is looped --}}
+      <li>{{this.answer}}</li>
+      {{/each}}
+      <li class="media list-group-item p-a-2">
+        <div class="input-group">
+          <input type="text" class="form-control comment-body" id="post-{{id}}" data-postid="{{id}}"
+            placeholder="Answer">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default comment-submit" id="{{id}}">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    {{/each}}
+  </div>
 </div>
-
-
 
 <!-- Custom Script -->
 <script src="/js/mainblogpost.js" type="text/javascript"></script>

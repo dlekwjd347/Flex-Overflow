@@ -5,36 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/css/framework.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheets/css/aboutus.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/css/navbar.css">
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/css/aboutus.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/css/navbar.css">
   <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"></script>
 </head>
 <header>
+ 
+  <nav class="main-nav">
 
-  <nav>
-    <div class="menu-icon">
-      <i class="fa fa-bars fa-2x"></i>
-    </div>
     <div class="logo">
-      Flex <span class="navtitle">Overflow</span>
+      Flex <span class="navtitle"> Overflow</span>
     </div>
     <div class="menu">
-      <ul>
-        <li><a href="q-n-a.html">Interview Questions</a></li>
-        <li><a href="/mainblog">Forum</a></li>
-        <li><a href="aboutus.html">About</a></li>
-        <li><a href="project.html">Project</a></li>
-
+      <ul class="menu-list">
+        <li class="menu-item"><a href="q-n-a.html">Interview Questions</a></li>
+        <li class="menu-item"><a href="/mainblog">Forum</a></li>
+        <li class="menu-item"><a href="aboutus.html">About</a></li>
+        <li class="menu-item"><a href="project.html">Project</a></li>
+        <!-- {{#if user}} -->
+        <li class="menu-item">
+          <a href="/api/logout" id="profile-link">Logout</a>
+        </li>
+        <!-- {{/if}} -->
       </ul>
     </div>
   </nav>
@@ -42,7 +43,6 @@
 </header>
 <body>
 
-  
   <div class="container">
     <div class="about">
       <h1>About Us</h1>
@@ -54,20 +54,21 @@
         Our mission is to help coders collectively prepare for the road ahead and create a platform that will connect
         users worldwide. </p>
       </div>
-      <div class="about">
-      <h2>Technologies Used</h2>
-      <p>
-        <li>HTML 5</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>nodeJS</li>
-        <li>Handlebars</li>
-        <li>ExpressJS</li>
-        <li>MySQL</li>
-        <li>Bootstrap</li>
-      </p>
-    </div>
-    <div class="team">
+
+      <section class="about" id="technologies">
+        <h2>Technologies Used</h2>
+      <div class="center">
+        <div>HTML 5</div>
+        <div>CSS</div>
+        <div>Javascript</div>
+        <div>nodeJS</div>
+        <div>Handlebars</div>
+        <div>ExpressJS</div>
+        <div>MySQL</div>
+        <div>Bootstrap</div>
+      </div>
+      </section>
+    <div class="team my-slider">
       <h3>Meet the Flex Overflow team</h3>
       <br>
       <div class="card-group">
@@ -123,7 +124,9 @@
       </div>
     </div>
   </div>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script type="text/javascript" src="js/slider.min.js"></script>
 </body>
 
 </html>

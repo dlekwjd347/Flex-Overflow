@@ -1,9 +1,8 @@
 
 $(document).ready(function(){
-    var currentQuestion 
+
     $("#new-question").on("click", function(){
         $.get("/api/randomquestion").then(function(question){
-            currentQuestion = question
             $("#question").html(question.question)
             $("#answer").empty()
             $("#example").empty()
@@ -11,9 +10,11 @@ $(document).ready(function(){
     })
 
     $("#answer-button").on("click", function(){
-        console.log(currentQuestion.answer);
-        console.log(currentQuestion.example);
-        $("#answer").html(currentQuestion.answer)
-        $("#example").html(currentQuestion.example)
+        $.get("/api/randomquestion").then(function(question){
+        console.log(question.answer);
+        console.log(question.example);
+        $("#answer").html(question.answer)
+        $("#example").html(question.example)
+        })
     })     
 })

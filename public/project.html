@@ -4,17 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/fonts/flaticon/font/flaticon.css">
-    <link href="stylesheets/css/project.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/css/navbar.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet">
+    <link href="stylesheets/css/project.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/navbar.css">
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <title>Flex Project Board</title>
@@ -23,30 +20,34 @@
 <body>
     <header>
 
-        <nav>
-            <div class="menu-icon">
-                <i class="fa fa-bars fa-2x"></i>
-            </div>
+        <nav class="main-nav">
+
             <div class="logo">
-                Flex <span class="navtitle">Overflow</span>
+              Flex <span class="navtitle">Overflow</span>
             </div>
             <div class="menu">
-                <ul>
-                    <li><a href="q-n-a.html">Interview Questions</a></li>
-                    <li><a href="/mainblog">Forum</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="project.html">Project</a></li>
-
-                </ul>
+              <ul class="menu-list">
+                <li class="menu-item"><a href="q-n-a.html">Interview Questions</a></li>
+                <li class="menu-item"><a href="/mainblog">Forum</a></li>
+                <li class="menu-item"><a href="aboutus.html">About</a></li>
+                <li class="menu-item"><a href="project.html">Project</a></li>
+                <!-- {{#if user}} -->
+                <li class="menu-item">
+                  <a href="/api/logout" id="profile-link">Logout</a>
+                </li>
+                <!-- {{/if}} -->
+              </ul>
             </div>
-        </nav>
+          </nav>
 
     </header>
     <br><br>
     <div class="container">
+        <div class="brand">
         <h1>Flex Overflow <span>Project Board</span></h1>
         <p>This project board showcases our inspiration, thought processes, and acceptance criteria as benchmarks for
             our functional app.</p>
+        </div>
     </div>
     <div class="row p-body">
         <div class="col-sm-12 pback">
@@ -65,7 +66,7 @@
             <div class="card">
                 <div class="card-body card-body-2">
                     <h3 class="card-title">Acceptance Criteria</h3>
-                    <div class="linecont">
+                    <div class="linecont2">
                     <ol class="card-text column">1. Given that, I go to the page in the browser, a launch page is open
                         to initiate a log in with a "Get Started" button. </ol>
                     <ol class="card-text column">2. Given that, I am taken to a log in page in which I log in for the
@@ -207,8 +208,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
-
 
 </body>
 
