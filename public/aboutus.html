@@ -9,14 +9,16 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/stylesheets/css/aboutus.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="/Project-2.2-2020/public/stylesheets/css/aboutcard.css">
   <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"></script>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <header>
  
@@ -31,11 +33,8 @@
         <li class="menu-item"><a href="/mainblog">Forum</a></li>
         <li class="menu-item"><a href="aboutus.html">About</a></li>
         <li class="menu-item"><a href="project.html">Project</a></li>
-        <!-- {{#if user}} -->
-        <li class="menu-item">
-          <a href="/api/logout" id="profile-link">Logout</a>
+        <li class="menu-item"><a href="/api/logout" id="profile-link">Logout</a>
         </li>
-        <!-- {{/if}} -->
       </ul>
     </div>
   </nav>
@@ -58,14 +57,14 @@
       <section class="about" id="technologies">
         <h2>Technologies Used</h2>
       <div class="center">
-        <div>HTML 5</div>
-        <div>CSS</div>
-        <div>Javascript</div>
-        <div>nodeJS</div>
-        <div>Handlebars</div>
-        <div>ExpressJS</div>
-        <div>MySQL</div>
-        <div>Bootstrap</div>
+        <div class='slidercard'>HTML 5</div>
+        <div class='slidercard'>CSS</div>
+        <div class='slidercard'>Javascript</div>
+        <div class='slidercard'>nodeJS</div>
+        <div class='slidercard'>Handlebars</div>
+        <div class='slidercard'>ExpressJS</div>
+        <div class='slidercard'>MySQL</div>
+        <div class='slidercard'>Bootstrap</div>
       </div>
       </section>
     <div class="team my-slider">
@@ -123,10 +122,57 @@
         </div>
       </div>
     </div>
+
+
+    <div class="card-container">
+      <span class="pro">PRO</span>
+      <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+      <h3>Ricky Park</h3>
+      <h6>New York</h6>
+      <p>User interface designer and <br/> front-end developer</p>
+      <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Following
+        </button>
+      </div>
+      <div class="skills">
+        <h6>Skills</h6>
+        <ul>
+          <li>UI / UX</li>
+          <li>Front End Development</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <script type="text/javascript" src="js/slider.min.js"></script>
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
 </body>
 
 </html>
