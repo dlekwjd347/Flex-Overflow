@@ -35,6 +35,7 @@ module.exports = function(app) {
   app.get("/api/logout", (req, res) => {
     req.logout();
     res.redirect("/"); // go back to home 
+    
   });
 
   // Route for getting some data about our user to be used client side
@@ -65,6 +66,9 @@ module.exports = function(app) {
       })
       .then(dbquestion => {
         res.json(dbquestion);
+      })
+      .catch(err => {
+        res.status(401).json(err);
       });
   });
 
@@ -76,8 +80,11 @@ module.exports = function(app) {
       }
     }).then(dbPost => {
       res.json(dbPost);
+    })
+    .catch(err => {
+      res.status(401).json(err);
+    })
     });
-  });
 
   app.get("/assets/images/wireframe1-1.JPG", function(req, res){
 		res.writeHead(200, {'Content-Type': 'image/jpeg'});
