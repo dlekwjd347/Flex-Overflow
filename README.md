@@ -1,13 +1,14 @@
 # Flex OverFlow
 
-The Flex Overflow team is comprised of four Full Stack Engineers collaborating on one specific idea, Preparation
+The Flex Overflow team is comprised of four Full Stack Engineers collaborating on one specific idea, Preparation.\
+\
+We at Flex Overflow understand that you can never be over prepared when it comes to job and skill knowledge.\
+We wanted to help create an app that will not only help you prepare for your next big interview but connect with those peers on some of the more in depth questions that will come up during the length of a Full Stack Course. \
+Our mission is to help coders collectively prepare for the road ahead and create a platform that will connect users worldwide.
 
 ## User Story
 As a coding student I want to be able to post questions or answer questions of my fellow students.\
 I also want to be able to quiz myself on possible interview questions. So that I can be prepared for any new challenges.\
-We at Flex Overflow understand that you can never be over prepared when it comes to job and skill knowledge.\
-We wanted to help create an app that will not only help you prepare for your next big interview but connect with those peers on some of the more in depth questions that will come up during the length of a Full Stack Course. \
-Our mission is to help coders collectively prepare for the road ahead and create a platform that will connect users worldwide.
 
 ## Acceptance Criteria 
 
