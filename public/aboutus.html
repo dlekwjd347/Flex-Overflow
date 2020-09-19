@@ -9,39 +9,38 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/stylesheets/css/aboutus.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/css/aboutcard.css">
   <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"></script>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
-<header>
- 
-  <nav class="main-nav">
 
-    <div class="logo">
-      Flex <span class="navtitle"> Overflow</span>
-    </div>
-    <div class="menu">
-      <ul class="menu-list">
-        <li class="menu-item"><a href="q-n-a.html">Interview Questions</a></li>
-        <li class="menu-item"><a href="/mainblog">Forum</a></li>
-        <li class="menu-item"><a href="aboutus.html">About</a></li>
-        <li class="menu-item"><a href="project.html">Project</a></li>
-        <!-- {{#if user}} -->
-        <li class="menu-item">
-          <a href="/api/logout" id="profile-link">Logout</a>
-        </li>
-        <!-- {{/if}} -->
-      </ul>
-    </div>
-  </nav>
-
-</header>
 <body>
+  <header>
+ 
+    <nav class="main-nav">
+  
+      <div class="logo">
+        Flex <span class="navtitle"> Overflow</span>
+      </div>
+      <div class="menu">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="q-n-a.html">Interview Questions</a></li>
+          <li class="menu-item"><a href="/mainblog">Forum</a></li>
+          <li class="menu-item"><a href="aboutus.html">About</a></li>
+          <li class="menu-item"><a href="project.html">Project</a></li>
+          <li class="menu-item"><a href="/api/logout" id="profile-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <div class="container">
     <div class="about">
@@ -58,14 +57,15 @@
       <section class="about" id="technologies">
         <h2>Technologies Used</h2>
       <div class="center">
-        <div>HTML 5</div>
-        <div>CSS</div>
-        <div>Javascript</div>
-        <div>nodeJS</div>
-        <div>Handlebars</div>
-        <div>ExpressJS</div>
-        <div>MySQL</div>
-        <div>Bootstrap</div>
+        <div class='slidercard'>HTML 5</div>
+        <div class='slidercard'>CSS</div>
+        <div class='slidercard'>Javascript</div>
+        <div class='slidercard'>nodeJS</div>
+        <div class='slidercard'>Handlebars</div>
+        <div class='slidercard'>ExpressJS</div>
+        <div class='slidercard'>MySQL</div>
+        <div class='slidercard'>Sequelize</div>
+        <div class='slidercard'>Bootstrap</div>
       </div>
       </section>
     <div class="team my-slider">
@@ -123,10 +123,31 @@
         </div>
       </div>
     </div>
+
+
+    <div class="card-container">
+      <img class="round" src="https://ca.slack-edge.com/T012THZCCB1-U0138GH3FJA-cc10a3e0c926-512" height= "180px;" alt="user" />
+      <h3>Elizabeth Lee</h3>
+      <h6>New York</h6>
+      <p>Full-Stack Engineer</p>
+      <div class="buttons">
+        <a target="_blank" href="https://github.com/dlekwjd347"><button class="primary">Github</button></a>
+        <a target="_blank" href="https://www.linkedin.com/in/elizabeth-lee2018/"><button class="primary">LinkedIn</button></a>
+      </div>
+      <div class="skills">
+        <h6>Skills</h6>
+        <div class="scroll card-description">Elizabeth was responsible for the backend prodcution of the
+          Flex Overflow application which includes the random question generator as well as the links to the front
+          end of the application. She also wrote the code that will generate a new question on demand. </div>
+      </div>
+    </div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <script type="text/javascript" src="js/slider.min.js"></script>
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
 </body>
 
 </html>

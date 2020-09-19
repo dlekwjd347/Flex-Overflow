@@ -5,7 +5,13 @@ body{
    background-repeat: none;
    font-family: 'Lato', sans-serif;
    font-size: 20px;
-   margin-top: 30px;
+   min-height: 100vh;
+}
+
+.slidercard {
+   padding: 15px;
+   border-width: .2px;
+   border-style: solid;
 }
 
 .about{
@@ -13,10 +19,7 @@ body{
    text-align: center;
    color: white;
    padding: 10px;
-   /* background: rgba(000,000,000,0.5); */
    max-width: 70ch;
-
-
 }
 
 h1 {
