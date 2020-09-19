@@ -5,43 +5,21 @@ body{
    background-repeat: none;
    font-family: 'Lato', sans-serif;
    font-size: 20px;
-   margin-top: 30px;
+   min-height: 100vh;
 }
-
-<<<<<<< HEAD
- .about{
-    margin: auto;
-    text-align: center;
-    color: white;
-    padding: 10px;
-    max-width: 70ch;
- }
 
 .slidercard {
    padding: 15px;
    border-width: .2px;
    border-style: solid;
 }
-   
 
-
- h1 {
-  font-family: 'Dosis', sans-serif;
-  color: yellow;
-  font-size: 31px;
-  margin: 20px;
- }
-=======
 .about{
    margin: auto;
    text-align: center;
    color: white;
    padding: 10px;
-   /* background: rgba(000,000,000,0.5); */
    max-width: 70ch;
-
->>>>>>> d188005764cec2625fac3547396dc7c9b34c8209
-
 }
 
 h1 {

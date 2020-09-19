@@ -24,9 +24,7 @@
 .menu-list {
     display: flex;
     flex-direction: row;
-    text-align: right;
-    /* justify-content: right */
-    margin-left: 450px;
+    justify-content: flex-end;
 }
 
 .menu-item {
@@ -35,9 +33,9 @@
 
 .main-nav {
     display: flex;
-    width: 100%;
     line-height: 60px;
     font-family: 'Exo', sans-serif;
+    font-weight: 300;
     margin: 0px 50px;
 }
 
