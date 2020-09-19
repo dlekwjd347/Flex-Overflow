@@ -12,7 +12,9 @@ body {
 	min-height: 100vh;
 	margin: 0;
 }
-
+.row {
+	justify-content: center;
+}
 h3 {
 	margin: 10px 0;
 }
@@ -34,9 +36,10 @@ p {
 	color: #B3B8CD;
 	padding-top: 30px;
 	position: relative;
-	width: 350px;
+	width: 400px;
 	max-width: 100%;
 	text-align: center;
+	margin: 20px;
 }
 
 .card-container .pro {
@@ -64,7 +67,7 @@ button.primary {
 	color: #231E39;
 	font-family: Montserrat, sans-serif;
 	font-weight: 500;
-	padding: 10px 25px;
+	padding: 8px 10px;
 }
 
 button.primary.ghost {
