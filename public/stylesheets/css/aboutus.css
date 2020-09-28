@@ -1,6 +1,6 @@
 body{
     font-size: 15px;
-    background-color: #0b132b;
+    background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
     
     font-family: 'Lexend Deca', sans-serif;
     margin-top: 30px;
@@ -10,8 +10,7 @@ body{
   .about{
      margin: 20px;
      text-align: center;
-     color: black;
-     background-color: #C6E2E9;
+     color: white;
      border-style: solid;
      border-color: white;
      border-width: .75px;
@@ -20,10 +19,8 @@ body{
   }
 
   h1 {
-   font-family: 'Lexend Deca', sans-serif;
-   
-   font-style: italic;
-   color: #0B132B;
+   font-family: 'Poppins', sans-serif;
+   color:white;
    font-size: 31px;
    margin: 20px;
   }
@@ -36,18 +33,14 @@ body{
   h2{
 
      font-size: larger;
-     font-family: 'Lexend Deca', sans-serif;
-     
-     font-style: italic;
-     color: #0B132B;
+     font-family: 'Poppins', sans-serif;
+     color: white;
      font-size: 31px;
   }
   
   h3{
-   font-family: 'Lexend Deca', sans-serif;
-    
-    font-style: italic;
-    color: #0B132B;
+   font-family: 'Poppins', sans-serif;
+    color: white;
     font-size: 27px;
     text-align: center;
     margin-top: 60px;
@@ -56,6 +49,10 @@ body{
   .scroll {
    max-height: 220px;
    overflow-y: auto;
+}
+
+.team {
+   color: black;
 }
 
 .card {
@@ -82,6 +79,7 @@ body{
    font-style: italic;
    font-weight: bold;
    font-size: 17px;
+   color: black;
   }
 
   .card-description {
