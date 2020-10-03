@@ -5,44 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/css/framework.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheets/css/aboutus.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/css/navbar.css">
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/css/aboutus.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/css/aboutcard.css">
   <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet">
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <header>
 
-  <nav>
-    <div class="menu-icon">
-      <i class="fa fa-bars fa-2x"></i>
-    </div>
-    <div class="logo">
-      Flex <span class="navtitle">Overflow</span>
-    </div>
-    <div class="menu">
-      <ul>
-        <li><a href="q-n-a.html">Interview Questions</a></li>
-        <li><a href="/mainblog">Forum</a></li>
-        <li><a href="aboutus.html">About</a></li>
-        <li><a href="project.html">Project</a></li>
-
-      </ul>
-    </div>
-  </nav>
-
-</header>
 <body>
-
+  <header>
+ 
+    <nav class="main-nav">
   
+      <div class="logo">
+        Flex <span class="navtitle"> Overflow</span>
+      </div>
+      <div class="menu">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="q-n-a.html">Interview Questions</a></li>
+          <li class="menu-item"><a href="/mainblog">Forum</a></li>
+          <li class="menu-item"><a href="aboutus.html">About</a></li>
+          <li class="menu-item"><a href="project.html">Project</a></li>
+          <li class="menu-item"><a href="/api/logout" id="profile-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
   <div class="container">
     <div class="about">
       <h1>About Us</h1>
@@ -54,76 +54,101 @@
         Our mission is to help coders collectively prepare for the road ahead and create a platform that will connect
         users worldwide. </p>
       </div>
-      <div class="about">
-      <h2>Technologies Used</h2>
-      <p>
-        <li>HTML 5</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>nodeJS</li>
-        <li>Handlebars</li>
-        <li>ExpressJS</li>
-        <li>MySQL</li>
-        <li>Bootstrap</li>
-      </p>
-    </div>
-    <div class="team">
+
+      <section class="about" id="technologies">
+        <h2>Technologies Used</h2>
+      <div class="center">
+        <div class='slidercard'>HTML 5</div>
+        <div class='slidercard'>CSS</div>
+        <div class='slidercard'>Javascript</div>
+        <div class='slidercard'>nodeJS</div>
+        <div class='slidercard'>Handlebars</div>
+        <div class='slidercard'>ExpressJS</div>
+        <div class='slidercard'>MySQL</div>
+        <div class='slidercard'>Sequelize</div>
+        <div class='slidercard'>Bootstrap</div>
+        <div class='slidercard'>Slick</div>
+        <div class='slidercard'>Cloudinary</div>
+      </div>
+      </section>
+    <div class="team my-slider">
       <h3>Meet the Flex Overflow team</h3>
       <br>
-      <div class="card-group">
-        <div class="card">
-          <img class="card-img-top" src="https://ca.slack-edge.com/T012THZCCB1-U0138GH3FJA-cc10a3e0c926-512"
-            alt="Elizabeth Lee">
-          <div class="card-body">
-            <h5 class="card-title">Elizabeth Lee</h5>
-            <p class="card-text">Backend Engineer</p>
-            <div class="scroll bg-light card-description">Elizabeth was responsible for the backend prodcution of the
-              Flex Overflow application which includes the random question generator as well as the links to the front
-              end of the application. She also wrote the code that will generate a new question on demand. </div>
-          </div>
-        </div>
+    </div>
 
-        <div class="card">
-          <img class="card-img-top" src="https://ca.slack-edge.com/T012THZCCB1-U013ME2CJR2-89a4fb5f5ed9-512"
-            alt="Sarah Abouelela">
-          <div class="card-body">
-            <h5 class="card-title">Sarah Abouelela</h5>
-            <p class="card-text">Backend Engineer</p>
-            <p class="scroll bg-light card-description">Sarah was responsible for the backend production of the Flex
-              Overflow app which included the logic for api routing. Utilizing the post, get, update, create and delete
-              methods which connect to the supplying the data inputs. </p>
-
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="https://ca.slack-edge.com/T012THZCCB1-U0138GHDYB0-27b26f8df025-512"
-            alt="Johnson Pham">
-          <div class="card-body">
-            <h5 class="card-title">Johnson Pham</h5>
-            <p class="card-text">Frontend Engineer</p>
-            <p class="scroll bg-light card-description">Johnson designed the landing, loading, sign-up/log-in, and Forum pages of Flex Overflow's app.
-              HTML routes were routed to work from the launch page to the Forum
-              page. With use of forms, button on-click handlers, and organized MVC Johnson utilized Sequelize to render object values to render Handlebars pages on the Forum page.</p>
-
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="https://ca.slack-edge.com/T012THZCCB1-U013DU238FP-dd4bca1a3720-512"
-            alt="Bobby Sporman">
-          <div class="card-body">
-            <h5 class="card-title">Bobby Sporman</h5>
-            <p class="card-text">Frontend Engineer</p>
-            <p class="scroll bg-light card-description">Bobby created the about us page that you are currently reading.
-              He was also responsible for the HTML routes from the post and Interview Questions page. On the Interview
-              Questions page, Bobby developed the random question and answer object values to render to the DOM, using
-              button on-click handlers and jquery methods to execute the desired functionality.</p>
-
-          </div>
-        </div>
+<div class="row">
+    <div class="card-container col-md-4">
+      <img class="round" src="https://ca.slack-edge.com/T012THZCCB1-U0138GH3FJA-cc10a3e0c926-512" height= "180px;" alt="Elizabeth Lee" />
+      <h3>Elizabeth Lee</h3>
+      <h6>New York</h6>
+      <p>Full-Stack Engineer</p>
+      <div class="buttons">
+        <a target="_blank" href="https://github.com/dlekwjd347"><button class="primary">Github</button></a>
+        <a target="_blank" href="https://www.linkedin.com/in/elizabeth-lee2018/"><button class="primary">LinkedIn</button></a>
+      </div>
+      <div class="skills">
+        <h6>Skills</h6>
+        <div class="scroll card-description">Elizabeth served as the project lead and was responsible for the back-end and front-end production of the
+          Flex Overflow application.<br> Her tasks includes the random question generator js script, MySQL seeds file for questions and answers, project page styling (modals, user story, and acceptance criteria), wireframing, and the about us page styling (profile cards, slick carousel). <br>She also debugged consistent jQuery console errors, ambiguous null values, and styling. </div>
+      </div>
+    </div>
+    <div class="card-container col-md-4">
+      <img class="round" src="https://ca.slack-edge.com/T012THZCCB1-U013ME2CJR2-89a4fb5f5ed9-512" height= "180px;" alt="Sarah Abouelela" />
+      <h3>Sarah Abouelela</h3>
+      <h6>New York</h6>
+      <p>Full-Stack Engineer</p>
+      <div class="buttons">
+        <a target="_blank" href="https://github.com/abouelelas"><button class="primary">Github</button></a>
+        <a target="_blank" href="https://www.linkedin.com/in/sarah-abouelela-006056b2/"><button class="primary">LinkedIn</button></a>
+      </div>
+      <div class="skills">
+        <h6>Skills</h6>
+        <div class="scroll card-description">Sarah was responsible for the back-end production of the Flex
+          Overflow app which included the Models in the MVC organization for functional API routing. <br>Utilizing the post, get, update, and create
+          methods which connect the body's request to the supply the MySQL tables. </div>
+      </div>
+    </div> 
+  </div>
+  <div class="row">
+    <div class="card-container col-md-4">
+      <img class="round" src="https://ca.slack-edge.com/T012THZCCB1-U0138GHDYB0-27b26f8df025-512" height= "180px;" alt="Johnson Pham" />
+      <h3>Johnson Pham</h3>
+      <h6>New York</h6>
+      <p>Full-Stack Engineer</p>
+      <div class="buttons">
+        <a target="_blank" href="https://github.com/mrjohnsonpham"><button class="primary">Github</button></a>
+        <a target="_blank" href="https://www.linkedin.com/in/johnsondpham/"><button class="primary">LinkedIn</button></a>
+      </div>
+      <div class="skills">
+        <h6>Skills</h6>
+        <div class="scroll card-description">Johnson designed the landing, loading, sign-up/log-in, and Forum pages of Flex Overflow's app. <br>
+          On the back-end, Johnson generated the HTML routes that are routed to work from the launch page to the Forum page.<br>He also headed the app's functional Passport feature to allow users to login/signup and store emails and encrypted passwords in a MySQL database. <br>With use of forms, button on-click handlers, and organized MVC Johnson utilized Sequelize to render object values to render Handlebars pages on the Forum page.<br>Johnson also routed the log out route for users.</div>
+      </div>
+    </div>
+    <div class="card-container col-md-4">
+      <img class="round" src="https://ca.slack-edge.com/T012THZCCB1-U013DU238FP-dd4bca1a3720-512" height= "180px;" alt="Bobby Sporman" />
+      <h3>Bobby Sporman</h3>
+      <h6>New York</h6>
+      <p>Full-Stack Engineer</p>
+      <div class="buttons">
+        <a target="_blank" href="https://github.com/RSporman"><button class="primary">Github</button></a>
+        <a target="_blank" href="https://www.linkedin.com/in/bobby-sporman-06580914a/"><button class="primary">LinkedIn</button></a>
+      </div>
+      <div class="skills">
+        <h6>Skills</h6>
+        <div class="scroll card-description">Bobby structured the about us page that you are currently reading with Bootstrap's grid framework.<br>
+         On the back-end, he was also responsible for the HTML routes from the post and Interview Questions page. <br>On the Interview
+          Questions page, Bobby developed the random question and answer object values to render to the DOM, using
+          button on-click handlers and jquery methods to execute the desired functionality.</div>
       </div>
     </div>
   </div>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
 </body>
 
 </html>

@@ -6,9 +6,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false
         }
-
     });
-
     UserAnswer.associate = function(models){
         UserAnswer.belongsTo(models.UserQuestion, {
             foreignKey: {
@@ -16,6 +14,5 @@ module.exports = function (sequelize, DataTypes) {
             }
         });
     };
-
     return UserAnswer;
 };

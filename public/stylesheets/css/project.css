@@ -1,13 +1,31 @@
 body {
+<<<<<<< HEAD
     font-family:'Poppins', sans-serif;
     color: white;
     background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
+=======
+    /* background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000); */
+    background-image: url(../../images/allbg.jpeg);
+    background-size: cover;
+    font-family: 'Exo', sans-serif;
+    font-size: 17px;
+    color: white;
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
     text-align: center;
 }
 
+.modaltext {
+    color: black;
+}
+
 h1 {
+<<<<<<< HEAD
     font-family: 'Poppins', sans-serif;
     color: white;
+=======
+    font-family: 'Exo', sans-serif;
+    color: yellow;
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
     font-size: 30px;
 }
 
@@ -18,20 +36,34 @@ body {
 p {
     color: white
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
 
 .p-body {
-    margin-top: 50px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin: 25px 240px;
     border-style: solid;
-    border-color: white;
+    border-color: rgb(255, 247, 8);
     border-width: .75px;
+    
 }
 
+.brand{
+    margin: auto;
+    max-width: 60ch;
+}
+
+
 .linecont {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: auto;
+    text-align: center;
+    
+}
+.linecont2 {
+    margin: auto;
+    text-align: center;
+    max-width: 60ch;
 }
 
 
@@ -40,7 +72,11 @@ p {
     margin-bottom: 17px;
     margin-top: 40px;
     text-decoration: underline;
+<<<<<<< HEAD
     color: white;
+=======
+    color: yellow;
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
     letter-spacing: 3px;
 }
 
@@ -49,6 +85,7 @@ p {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
+    
 }
 
 .card-body-2 {

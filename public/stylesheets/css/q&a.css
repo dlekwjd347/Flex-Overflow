@@ -1,13 +1,20 @@
 body {
+<<<<<<< HEAD
     font-family: 'Lexend Deca', sans-serif;
     background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
+=======
+    font-family: 'Lato', sans-serif;
+    background-image: url(../../images/allbg.jpeg);
+    background-size: cover;
+    background-repeat: none;
+    min-height: 100vh;
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
 }
 .content {
     margin-left: 50px;
     margin-right: 130px;
     margin-bottom: 40px;
 }
-
 
 .label {
     margin-bottom: 40px;
@@ -18,7 +25,11 @@ body {
 }
 
 .prompt{
+<<<<<<< HEAD
     font-family: 'Poppins', sans-serif;
+=======
+    font-family: 'Exo', sans-serif;
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
  
     color: white;
     font-size: 27px;
@@ -39,7 +50,11 @@ body {
 h1{
     font-size: larger;
   color:white;
+<<<<<<< HEAD
   font-family: 'Poppins', sans-serif
+=======
+  font-family: 'Exo', sans-serif;
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
 }
 
 #new-question {
@@ -53,7 +68,7 @@ h1{
     border-radius: 15px;
     cursor: pointer;
     transition: 1.5s;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Lato', sans-serif;
 
 }
 #new-question:hover{
@@ -71,9 +86,10 @@ h1{
     border-radius: 10px;
     cursor: pointer;
     transition: 1.5s;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Lato', sans-serif;
+ }
 
-}
+
 #answer-button:hover{
     box-shadow: 0 8px 20px 0 #FAF3DD inset, 0 8px 20px 0 #FAF3DD;
 }
@@ -88,5 +104,11 @@ h1{
     font-weight: bold;
     font-size: 40px;
     letter-spacing: 2px;
+<<<<<<< HEAD
     font-family: 'Lexend Deca', sans-serif;
 }
+=======
+    font-family: 'Lato', sans-serif;
+ }
+
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840

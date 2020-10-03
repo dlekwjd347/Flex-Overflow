@@ -1,0 +1,64 @@
+/* .site-width-limit {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+} */
+
+.logo {
+    line-height: 60px;    
+    color: #ffea00;
+    display: flex;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 'Ruda', sans-serif;   
+}
+
+.navtitle {
+    font-family: 'Chakra Petch', sans-serif;
+    font-style: italic;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.menu-item {
+    padding: 1rem;
+}
+
+.main-nav {
+    display: flex;
+    line-height: 60px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    margin: 0px 50px;
+}
+
+nav ul {
+    line-height: 70px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    text-align: right;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.menu {
+    width: 100%;
+}
+
+
+a:hover{
+    color: #fff700;
+    }

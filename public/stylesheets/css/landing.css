@@ -1,19 +1,27 @@
 html{
+<<<<<<< HEAD
     background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
+=======
+    background-color: #000000;
 }
-
+.site-wrapper {
+    background-color: #000000;
+>>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
+}
 /* Intro Message */
 #banner{
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding-top: 240px;
-    /* height: 100vh; */
-    /* background: #050801; */
-    font-family: 'Lexend Deca', sans-serif;
+    padding-top: 145px;
+    font-family: 'Exo', sans-serif;
     font-weight: bold;
-    color: #6FFFE9;
+    color: #ffea00;
+}
+
+.mission{
+    font-size: 25px;
 }
 
 
@@ -22,8 +30,8 @@ html{
     justify-content: center;
     text-align: center;
     align-items: center;
-    font-family: 'Lexend Deca', sans-serif;
-    padding: 25px 10px;
+    font-family: 'Exo', sans-serif;
+    padding: 40px 10px;
     margin: 40px 0;
     color: #ffea00;
     text-decoration: none;
@@ -123,9 +131,6 @@ html{
     }
 
 }
-
-
-
 
 @media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
     body {

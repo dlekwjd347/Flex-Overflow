@@ -3,8 +3,6 @@ $(document).ready(function () {
     var postBodyInput = $("#post-body");
     var postTypeInput = "status-update";
 
-
-
     $("#post-submit").on("click", function () {
         event.preventDefault();
         console.log("CLICKed")
@@ -12,8 +10,6 @@ $(document).ready(function () {
         if (!postBodyInput.val().trim()) {
             return;
         }
-
-
 
         var newPost = {
             question: postBodyInput.val().trim(),
@@ -62,3 +58,9 @@ $(document).ready(function () {
     }
 
 })
+var slider = tns({
+    container: '.my-slider',
+    items: 3,
+    slideBy: 'page',
+    autoplay: true
+  });
