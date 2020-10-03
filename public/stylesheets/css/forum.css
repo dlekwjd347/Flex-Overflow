@@ -3,7 +3,6 @@ body {
     background-image: url(../../images/allbg.jpeg);
     background-size: cover;
     min-height: 100vh;
-    /* text-align: center; */
 }
 .site-width-limit {
     max-width: 950px;
@@ -14,15 +13,72 @@ body {
     width: 100%;
 }
 
-h3 {
+.question-section {
+   
+    width: 95%;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-bottom: 8%;
+    padding: 3% 1% 3% 1%;
+}
+
+#all-questions {
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+
+
+.question-input {
+    height: 93px;
+}
+
+.question-input-back {
+    height: 115px;
+}
+
+.question-title {
     font-family: 'Exo', sans-serif;
-    font-size: 20px;
-    color: white;
+    font-size: 15px;
+    color: black;
+    margin-right: 5%;
 }
 
 .list-group{
     font-family: 'Exo', sans-serif;
     font-size: 16px;
     font-weight: bold;
-    /* color: black; */
 } 
+
+.question-line{
+    width: 80%;
+    margin-left: 9%;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 4px;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+.comment-delete {
+    float: right;
+
+}
+
+.answer-box {
+    margin-left: 20%;
+    padding: 1%;
+}
+
+.new-answer {
+    padding: 2%;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-left: 50%;
+    margin-bottom: 2%;
+    width: 40%;
+    text-align: right;
+    display:inline-block;
+}

@@ -23,29 +23,37 @@
 <div class="site-width-limit">
   {{!-- <div class="col-md-12"> --}}
 
-    <ul class="list-group media-list media-list-stream">
+    <ul class="list-group">
 
-      <li class="media list-group-item question p-a">
+      <li class="list-group-item question-input-back">
         <div class="input-group">
-          <input type="text" class="form-control post-body-class" id="post-body" placeholder="Ask Your Question">
+          <textarea rows="4" cols="10" class="form-control question-input" id="post-body" placeholder="Ask Your Question"></textarea>
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default post-button" id="post-submit">
+            <button type="button" class="btn btn-default post-button question-input" id="post-submit">
               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </button>
+             
           </div>
         </div>
       </li>
   </ul>
 
-  <div>
+  <div id="all-questions">
     {{#each QuestionsArr}}
-    <h3>{{this.question}}</h3>
-    <ul class="list-group media-list media-list-stream">
+    <div class="question-section"> 
+    <div class="question-line">
+        <span class="question-title">{{this.question}}</span>
+     <button type="button" class="btn btn-default comment-delete glyphicon glyphicon-remove-circle" id="{{this.question}}" aria-hidden="true">
+            </button>
+    </div>
+  
+    <ul class="list-group">
+       
       {{#each UserAnswers}}
       {{!-- nested each: the answer array is going to be looped while the question array is looped --}}
-      <li>{{this.answer}}</li>
+      <div class="new-answer">{{this.answer}}</div>
       {{/each}}
-      <li class="media list-group-item p-a-2">
+      <li class="answer-box">
         <div class="input-group">
           <input type="text" class="form-control comment-body" id="post-{{id}}" data-postid="{{id}}"
             placeholder="Answer">
@@ -53,12 +61,15 @@
             <button type="button" class="btn btn-default comment-submit" id="{{id}}">
               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </button>
+         
           </div>
         </div>
       </li>
     </ul>
+     </div>
     {{/each}}
   </div>
+
 </div>
 
 <!-- Custom Script -->
