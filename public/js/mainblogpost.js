@@ -30,7 +30,6 @@ $(document).ready(function () {
         // Wont submit the comment if we are missing a body
         var postId = $(this).attr('id');
         var commentBodyInput = $("#post-" + postId);
-        // var commentPostId = $("#post-" + postId).data('postid');
         if (!commentBodyInput.val().trim()) {
             return;
         }
@@ -41,6 +40,10 @@ $(document).ready(function () {
         console.log(newComment);
         submitComment(newComment);
     });
+
+
+
+
     $(".comment-body").keydown(function (e) {
         if (e.keyCode == 13) {
             $(".comment-submit").click();
@@ -57,6 +60,17 @@ $(document).ready(function () {
         });
     }
 
+    $(".comment-delete").on("click", function (UserQuestion) {
+        $.post("/api/posts/", UserQuestion, function () {
+            var id = $(this).data("id");
+            $.ajax({
+              method: "DELETE",
+              url: "/api/todos/" + id
+            }).then(getTodos);
+        });
+
+
+    })
 })
 var slider = tns({
     container: '.my-slider',
