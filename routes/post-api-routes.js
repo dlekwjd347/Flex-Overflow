@@ -58,15 +58,15 @@ module.exports = function(app) {
     }
     });
 
-    app.delete("/api/posts/:id", function(req, res) {
-        db.UserQuestion.destroy({
-          where: {
-            id: req.params.id,
-          }
-        }).then( dbPost => {
-          res.json(dbPost);
-        });
-      });
+    // app.delete("/api/posts/:id", function(req, res) {
+    //     db.UserQuestion.destroy({
+    //       where: {
+    //         id: req.params.id,
+    //       }
+    //     }).then( dbPost => {
+    //       res.json(dbPost);
+    //     });
+    //   });
 
 app.post("/api/answer/", function(req, res) {
     db.UserAnswer.create(req.body).then(function(dbAnswer) {

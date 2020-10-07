@@ -1,28 +1,4 @@
 body{
-<<<<<<< HEAD
-    font-size: 15px;
-    background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
-    
-    font-family: 'Lexend Deca', sans-serif;
-    margin-top: 30px;
-  }
-
-
-  .about{
-     margin: 20px;
-     text-align: center;
-     color: white;
-     border-style: solid;
-     border-color: white;
-     border-width: .75px;
-     padding: 10px;
-
-  }
-
-  h1 {
-   font-family: 'Poppins', sans-serif;
-   color:white;
-=======
    background-color: #0b132b;
    background-image: url(../../images/allbg.jpeg);
    background-size: cover;
@@ -49,7 +25,6 @@ body{
 h1 {
    font-family: 'Exo', sans-serif;
    color: yellow;
->>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
    font-size: 31px;
    margin: 20px;
 }
@@ -57,27 +32,6 @@ h1 {
 li {
    padding-left: 490px;
    text-align: left;
-<<<<<<< HEAD
-  }
-  
-  h2{
-
-     font-size: larger;
-     font-family: 'Poppins', sans-serif;
-     color: white;
-     font-size: 31px;
-  }
-  
-  h3{
-   font-family: 'Poppins', sans-serif;
-    color: white;
-    font-size: 27px;
-    text-align: center;
-    margin-top: 60px;
-  }
-  
-  .scroll {
-=======
 }
 
 h2{
@@ -97,15 +51,10 @@ h3{
 }
 
 .scroll {
->>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
    max-height: 220px;
    overflow-y: auto;
 }
 
-<<<<<<< HEAD
-.team {
-   color: black;
-=======
 .technologies {
    font-family: 'Exo', sans-serif;
       font-size: 20px;
@@ -113,42 +62,12 @@ h3{
 
 .team {
   color: black;
->>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
 }
 
 .card {
   margin: 10px;
 }
 
-<<<<<<< HEAD
-  .card-group {
-     margin: 15px;
-  }
-
-  .card-title{
-     font-size: larger;
-  }
-  .card-description{
-     font-size: large;
-  }
-
-  .italicize {
-     font-style: italic;
-  }
-
-  .card-text {
-   font-family: 'Titillium Web', sans-serif;
-   font-style: italic;
-   font-weight: bold;
-   font-size: 17px;
-   color: black;
-  }
-
-  .card-description {
-     font-size: 17px;
-     font-family: 'Titillium Web', sans-serif;
-  }
-=======
  .card-group {
     margin: 15px;
  }
@@ -176,4 +95,3 @@ h3{
     font-size: 17px;
     font-family: 'Lato', sans-serif;
  }
->>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840

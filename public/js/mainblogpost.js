@@ -60,17 +60,16 @@ $(document).ready(function () {
         });
     }
 
-    $(".comment-delete").on("click", function (UserQuestion) {
-        $.post("/api/posts/", UserQuestion, function () {
+    $(".comment-delete").on("click", function (event) {
             var id = $(this).data("id");
-            $.ajax({
-              method: "DELETE",
-              url: "/api/todos/" + id
-            }).then(getTodos);
+            $.ajax("/api/posts/" + id, {
+              type: "DELETE"
+            }).then(
+                function() {
+                    location.reload();
+                }
+            );
         });
-
-
-    })
 })
 var slider = tns({
     container: '.my-slider',
