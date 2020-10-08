@@ -1,12 +1,8 @@
 html{
-<<<<<<< HEAD
-    background-image: linear-gradient(to left top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
-=======
     background-color: #000000;
 }
 .site-wrapper {
     background-color: #000000;
->>>>>>> cc6459a4d68e99e6311407f1438452d7c0477840
 }
 /* Intro Message */
 #banner{

@@ -82,7 +82,6 @@ $("#login-button").on("click", event => {
 //loader
 function MBC(element, heightIndentation, widthIndentation) {
   var ele = element;
-  console.log(ele);
   var IW = widthIndentation;
   var IH = heightIndentation;
   if (IH === undefined || IH === null) { IH = 0 };
@@ -187,9 +186,7 @@ function detectIE() {
       }
     }
   }
-  console.log('IE check:', msieversion);
-  console.log('Trident check:', tridentVersion);
-  console.log('edge check:', edgeversion);
+
   if (msieversion === 'false') {
     check = 0
   } else {

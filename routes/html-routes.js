@@ -44,7 +44,6 @@ module.exports = function (app) {
 				indexPosts: posts,
 				user: req.user
 			}
-			console.log('does it work', indexObject);
 			res.render("index", indexObject);
 
 		});
@@ -135,9 +134,8 @@ module.exports = function (app) {
 			],
 			order: [
 				['createdAt', 'DESC'],
-				// [db.UserAnswer, 'createdAt', 'ASC']
+				
 			],
-			// raw: true
 		}).then(questions => questions.map(question =>
 			question.get({ plain: true })))
 		.then(posts => {
@@ -148,31 +146,7 @@ module.exports = function (app) {
 			console.log(indexObject.QuestionsArr);
 			res.render("index", indexObject);
 		});
-	// const handlebarsObject = {
-	// 	userName: "Charlie",
-	// };
-	// console.log("in route get / ");
-	// db.UserQuestion.findAll({
-	// }).then(function (dbPost) {
-	// 	//res.json(dbPost);
-	// 	 console.log(dbPost)
-	// 	var qArray= []
-	// 	for (var i=0; i< dbPost.length;i++){
-	// 		qArray.push({
-	// 		id: dbPost[i].id,
-	// 		title:  dbPost[i].title,
-	// 		question:  dbPost[i].question,
-	// 		createdAt:  dbPost[i].createdAt,
-	// 		updatedAt:  dbPost[i].updatedAt
-	// 		})
-	// 	}
-	// 	const handlebarsObject = {
-	// 		questions: qArray
-	// 	};
-	// 	console.log(handlebarsObject)
-	// 	// get the info from the db and pass the question in the object
-	// 	res.render("index", handlebarsObject);
-	// })
+
 })
 }
 
