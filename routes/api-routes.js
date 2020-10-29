@@ -82,6 +82,7 @@ module.exports = function(app) {
       res.json(dbPost);
     })
     .catch(err => {
+      console.log(err);
       res.status(401).json(err);
     })
     });

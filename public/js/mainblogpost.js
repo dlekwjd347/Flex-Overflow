@@ -61,6 +61,7 @@ $(document).ready(function () {
     }
 
     $(".comment-delete").on("click", function (event) {
+        console.log("I'm deleted!");
             var id = $(this).attr("id");
             $.ajax("/api/posts/" + id, {
               type: "DELETE"
